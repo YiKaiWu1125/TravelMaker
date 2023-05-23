@@ -16,7 +16,7 @@
               prefWidth="185.0"
               text="Start"
               AnchorPane.leftAnchor="448.0"
-              AnchorPane.rightAnchor="448.0">
+              AnchorPane.rightAnchor="448.0" onAction="#clickStartButton">
          <font>
             <Font name="Comic Sans MS" size="25.0"/>
          </font>
