@@ -1,4 +1,4 @@
-package attractions;
+package ntou.cs.java2023.travelmaker;
 import java.util.ArrayList;
 
 
