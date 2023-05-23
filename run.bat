@@ -1,1 +1,0 @@
-javac -encoding utf-8 -d . *.java

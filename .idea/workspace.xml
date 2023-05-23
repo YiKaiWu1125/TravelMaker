@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce8830ca-6e52-4374-9873-49cfb070a09a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/StartApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/StartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/search-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/start-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/layout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/ntou/cs/java2023/travelmaker/StartApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/ntou/cs/java2023/travelmaker/StartController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/ntou/cs/java2023/travelmaker/search-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/ntou/cs/java2023/travelmaker/start-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/static/images/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/static/images/layout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/myselfAttractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/myselfAttractionsItinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/travelItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/travelItinerary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
