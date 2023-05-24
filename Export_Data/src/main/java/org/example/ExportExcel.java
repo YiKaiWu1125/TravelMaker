@@ -47,11 +47,12 @@ public class ExportExcel {
             titleFont.setBold(true);
             titleCellStyle.setFont(titleFont);
             Cell titleCell = titleRow.createCell(0);
-            titleCell.setCellValue("資料");
+            titleCell.setCellValue("旅遊規劃行程表");
             titleCell.setCellStyle(titleCellStyle);
 
+
             // 設置行
-            for (int i = 0; i < addresses.length; i++) {
+            for (int i = 0; i < name.length; i++) {
                 int rowIndex = i * 7 + 1;
 
                 Row addressRow = sheet.createRow(rowIndex);

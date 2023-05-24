@@ -7,7 +7,7 @@ public class ExportData {
         Scanner input = new Scanner(System.in);
 
         System.out.print("choose type: ");
-        String contentType = input.nextLine();
+        String contentType = input.nextLine().toLowerCase();
 
         if(contentType.equals("word")){
             System.out.println("you choose word!");

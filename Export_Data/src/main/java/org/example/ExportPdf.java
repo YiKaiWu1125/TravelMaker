@@ -5,6 +5,7 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
+import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 import java.io.File;
 
 import java.io.IOException;
@@ -56,17 +57,36 @@ public class ExportPdf {
             contentStream.setFont(font, 12);
 
             contentStream.newLineAtOffset(50, 700);
-            contentStream.showText("位址 :" + name);
+
+            //title
+            PDDocumentInformation info = document.getDocumentInformation();
+            info.setTitle("旅遊規劃行程表");
+            contentStream.showText("旅遊規劃行程表");
             contentStream.newLine();
-            contentStream.showText("地址：" + address);
+            contentStream.showText("");
             contentStream.newLine();
-            contentStream.showText("電話：" + phone);
-            contentStream.newLine();
-            contentStream.showText("營業時間：" + openingHours);
-            contentStream.newLine();
-            contentStream.showText("價位：" + price);
-            contentStream.newLine();
-            contentStream.showText("是否確認行程（含購票）：" + confirmation);
+            contentStream.showText("");
+
+            for (int i = 0; i < name.length; i++) {
+
+                contentStream.showText( i+1 +" :");
+                contentStream.newLine();
+                contentStream.showText("位址 :" + name[i]);
+                contentStream.newLine();
+                contentStream.showText("地址：" + address[i]);
+                contentStream.newLine();
+                contentStream.showText("電話：" + phone[i]);
+                contentStream.newLine();
+                contentStream.showText("營業時間：" + openingHours[i]);
+                contentStream.newLine();
+                contentStream.showText("價位：" + price[i]);
+                contentStream.newLine();
+                contentStream.showText("是否確認行程（含購票）：" + confirmation[i]);
+                contentStream.newLine();
+                contentStream.showText("");
+                contentStream.newLine();
+                contentStream.showText("");
+            }
             contentStream.endText();
 
             contentStream.close();

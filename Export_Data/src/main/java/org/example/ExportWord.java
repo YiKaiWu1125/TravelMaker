@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 public class ExportWord {
     public void run(){
         Scanner input = new Scanner(System.in);
-        String title = "資料";
+        String title = "旅遊規劃行程表";
         System.out.print("input somethings : ");
         String content = input.nextLine();
 
