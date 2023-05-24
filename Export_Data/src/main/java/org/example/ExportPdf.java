@@ -47,7 +47,7 @@ public class ExportPdf {
 
             PDPageContentStream contentStream = new PDPageContentStream(document, page, PDPageContentStream.AppendMode.APPEND, true);
 
-            PDType0Font font = PDType0Font.load(document, new File("TaipeiSansTCBeta-Light.ttf"));
+            PDType0Font font = PDType0Font.load(document, new File("./TaipeiSansTCBeta-Light.ttf"));
 
             contentStream.setFont(font, 12);
             contentStream.setLeading(14.5f); // 設定行高為 14.5f 或其他適當值
