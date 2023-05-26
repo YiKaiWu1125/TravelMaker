@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="zh-tw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旅遊景點搜尋結果 | 台灣旅遊景點行程</title>
+  <meta name="description" content="四方通行玩樂地圖以台灣旅遊景點資訊為主的入口網，提供您景點、美食、地圖、飯店、住宿、行程、活動資訊，更貼心的幫您整理了周邊旅遊景點、美食、住宿情報推薦，還有最熱門的景點、美食、活動資訊，方便您規劃旅遊行程與遊玩景點。">
+  <meta name="keywords" content="景點,旅遊,美食,地圖,飯店,住宿,行程,活動,推薦景點,">
+  <link type="text/css" rel="stylesheet" href="/css/style.css?t=2023052511">
+  <link type="text/css" rel="stylesheet" href="/css/style_rwd.css?t=2023052511">
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/jquery.blockUI.js"></script>
+  <script type="text/javascript" src="/js/main.js?t=2023052511"></script>
+  <script type="text/javascript" src="https://googlemaps.github.io/js-info-bubble/src/infobubble-compiled.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=zh-TW"></script>
+  <script language="Javascript">
+function CheckScenic(obj){
+	if (obj.s_city.value == "" && obj.s_class.value == "" && obj.s_key.value == ""){
+		alert("請選擇縣市、景點類型或輸入關鍵字！");
+	}else{
+		var auth = "";
+		
+		if (obj.s_city.value != ""){
+			auth += "s_city=" + obj.s_city.value;
+		}
+		if (obj.s_class.value != ""){
+			if (auth != "") auth += "&";
+			auth += "s_class=" + obj.s_class.value;
+		}
+		if (obj.s_key.value != ""){
+			if (auth != "&") auth += "&";
+			auth += "s_key=" + obj.s_key.value;
+		}
+		
+		if (auth != "") auth = "?" + auth;
+		
+		location.href = obj.action + auth;
+	}
+	
+	return false;
+}
+</script>
+ </head>
+ <body>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'zh-TW' ,layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+  <div id="google_translate_element" style="display:none;"></div>
+  <div id="TaiwanTravelScenic"></div>
+  <header>
+   <div class="web" id="JS_Web">
+    <div class="login">
+     &nbsp;<span class="closebtn" id="JS_Web_Close">×</span>
+    </div>
+    <ul>
+     <li><a href="//www.easytravel.com.tw/" target="_blank" title="四方通行旅遊"><img src="/images/www.easytravel.com.tw.png" alt="四方通行旅遊"></a></li>
+     <li><a href="//www.easytravel.com.tw/taiwan/orderroom/" target="_blank" title="台灣訂房"><span></span>台灣訂房</a></li>
+     <li><a href="//bnb.easytravel.com.tw" target="_blank" title="特色民宿"><span></span>特色民宿</a></li>
+     <li><a href="//twtour.easytravel.com.tw/" target="_blank" title="台灣行程"><span></span>台灣行程</a></li>
+     <li><a href="//experience.easytravel.com.tw" target="_blank" title="在地體驗"><span></span>在地體驗</a></li>
+     <li><a href="//rentcars.easytravel.com.tw/" target="_blank" title="台灣租車"><span></span>全省租車</a></li>
+     <li><a href="//news.easytravel.com.tw/" target="_blank" title="焦點新訊"><span></span>焦點新訊</a></li>
+     <li><a href="//guide.easytravel.com.tw/" target="_blank" title="台灣旅遊景點"><span></span>玩樂地圖</a></li>
+     <li><a href="//www.easytravel.com.tw/MapUrl.aspx?AutoNo=1055" target="_blank" title="國外行程"><span></span>國外行程</a></li>
+     <li><a href="//www.easytravel.com.tw/MapUrl.aspx?AutoNo=1169" target="_blank" title="國外訂房"><span></span>國外訂房</a></li>
+     <li><a href="//www.easytravel.com.tw/MapUrl.aspx?AutoNo=1170" target="_blank" title="國際機票"><span></span>國際機票</a></li>
+     <li><a href="//www.easytravel.com.tw/member/" target="_blank" title="會員帳戶"><span></span>會員帳戶</a></li>
+    </ul>
+   </div>
+   <nav>
+    <ul>
+     <li><a href="//guide.easytravel.com.tw/" title="首頁">首頁</a></li>
+    </ul>
+   </nav>
+   <section id="search">
+    <div class="webbtn" id="JS_Web_Open">
+     ≡
+    </div>
+    <h1><strong>旅遊景點搜尋結果</strong></h1>
+    <div class="navbtn" id="JS_Nav_Btn">
+     ⋮
+    </div>
+    <ul id="JS_Share">
+     <li><a href="#" onclick="shareFB(); return false;"><img src="/images/icon_fb.png" alt="Facebook 分享"><span>Facebook 分享</span></a></li>
+     <li><a href="#" onclick="shareGoogle(); return false;"><img src="/images/icon_google.png" alt="Google+ 分享"><span>Google+ 分享</span></a></li>
+     <li><a href="#" onclick="shareLine(); return false;"><img src="/images/icon_line.png" alt="LINE 分享"><span>LINE 分享</span></a></li>
+    </ul>
+    <div class="clear"></div>
+   </section>
+  </header>
+  <div id="main">
+   <div id="search">
+    <section>
+     <form name="s_scenic" id="JS_Scenic_Form" action="/search/" method="get" onsubmit="return CheckScenic(this);">
+      <select name="s_city"> <option value="">不分縣市</option> <option value="1">基隆市</option> <option value="2">台北市</option> <option value="3">新北市</option> <option value="4">桃園市</option> <option value="5">新竹市</option> <option value="6">新竹縣</option> <option value="8">苗栗縣</option> <option value="9">台中市</option> <option value="11">彰化縣</option> <option value="15">南投縣</option> <option value="16">雲林縣</option> <option value="21">嘉義市</option> <option value="12">嘉義縣</option> <option value="18">台南市</option> <option value="19">高雄市</option> <option value="22">屏東縣</option> <option value="7">宜蘭縣</option> <option value="23">花蓮縣</option> <option value="24">台東縣</option> <option value="13">金門縣</option> <option value="14">馬祖</option> <option value="25">澎湖縣</option> <option value="26">蘭嶼</option> <option value="27">綠島</option> <option value="28">小琉球</option> </select> <select name="s_class"> <option value="">不分景點類型</option> <option value="244">景點</option> <option value="5">小吃</option> <option value="998">飯店</option> <option value="243">夜市</option> <option value="239">名產</option> <option value="240">禮品</option> <option value="219">餐廳</option> <option value="200">娛樂</option> <option value="189">學校</option> <option value="213">購物</option> <option value="232">公廁</option> <option value="303">休息站</option> <option value="203">醫院</option> <option value="199">加油</option> <option value="198">警局</option> </select> <input type="text" name="s_key" value="台北" class="keyword" placeholder="請輸入關鍵字"> <input type="submit" name="submit" value="送出" class="submit">
+      <p class="s">熱門搜尋：</p>
+     </form>
+    </section>
+    <hr class="s">
+    <section>
+     <h4>旅遊景點搜尋條件：</h4>
+     <ol>
+      <li>台北</li>
+     </ol>
+    </section>
+   </div>
+   <article id="city">
+    <section>
+     <h2>共有 872 筆<strong>旅遊景點</strong>資料</h2>
+     <ol id="JS_List">
+      <li>
+       <div class="pic">
+        <a href="/scenic/37" tilte="台北市立動物園．木柵動物園" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/37/m/002.JPG" alt="台北市立動物園．木柵動物園"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/37" tilte="台北市立動物園．木柵動物園" target="_blank">台北市立動物園．木柵動物園</a>
+       </div>
+       <div class="place">
+        台北市文山區新光路2段30號<a href="https://www.google.com.tw/maps/search/24.998855,121.581069" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>台北市立動物園位於文山區又稱木柵動物園，國立政治大學附近，成立於民國75年10月31日，號稱亞洲最大的動物園，佔地182公頃，是圓山舊園的30倍大。最大的特色是動物的展示環境置上，皆呈現自然風貌，讓動物擁有與其原...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/35" tilte="台北行天宮" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/35/m/A58359.jpg" alt="台北行天宮"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/35" tilte="台北行天宮" target="_blank">台北行天宮</a>
+       </div>
+       <div class="place">
+        台北市中山區民權東路二段109號<a href="https://www.google.com.tw/maps/search/25.062681,121.533751" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>行天宮又叫恩主公廟，恩主就是救世主的意思，奉祀關聖帝君，關聖帝君(西元162~219年)是中國歷史上有名的戰將，因為他堅守信義，所以被尊為武聖；又由於他很會理財，所以又被尊奉為商業保護神。行天宮在西元1967年建立...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1379" tilte="台北龍山寺" target="_blank"><img src="//www.easytravel.com.tw/Upload/Attachments/2/1379/m/A85755.jpg" alt="台北龍山寺"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1379" tilte="台北龍山寺" target="_blank">台北龍山寺</a>
+       </div>
+       <div class="place">
+        台北市萬華區廣州街211號<a href="https://www.google.com.tw/maps/search/25.037219,121.499838" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>台北第一名剎「龍山寺」是現今萬華(舊稱艋舺)&nbsp;&nbsp;當地居民信仰、活動、集會和指揮的中心。從清乾隆3年（西元1738年）&nbsp;&nbsp;開始，到1740年落成。二百多年來，「龍山寺」多次的修建後，整個結構是完整『...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1355" tilte="台北101大樓" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/1355/m/002.jpg" alt="台北101大樓"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1355" tilte="台北101大樓" target="_blank">台北101大樓</a>
+       </div>
+       <div class="place">
+        台北市信義區市府路45號<a href="https://www.google.com.tw/maps/search/25.033846,121.564802" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>位於信義計畫區的台北101大樓，是台北市的新地標，這棟總高度達508公尺的建築，於1998年1月動工，購物中心於2003年開幕營運，辦公大樓在2004年12月正式啟用，台北101大樓堪稱世界第一高樓(高度計算包括塔頂塔尖，但不...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li class="ad"><a href="http://www.easytravel.com.tw/hplink.aspx?i=3&amp;p=1&amp;n=24317" target="_blank" title="100萬會員折扣碼	"><img src="//www.easytravel.com.tw/upload/ADV/AdvPhoto_202212301536221_PW655.jpg" alt="100萬會員折扣碼	"></a></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1349" tilte="台北小巨蛋" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/1349/m/004.JPG" alt="台北小巨蛋"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1349" tilte="台北小巨蛋" target="_blank">台北小巨蛋</a>
+       </div>
+       <div class="place">
+        台北市松山區南京東路四段2號<a href="https://www.google.com.tw/maps/search/25.0516665343148,121.549979546032" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>小巨蛋為台灣第一座國際性大型綜合體育館，分為主館和副館，主館為多用途體育館可滿足多項運動競技、展覽、藝術表演、演唱會、集會等大型活動使用，擁有15,000席觀眾席，並設有48間國內首創的貴賓包廂，副館則有800個...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1368" tilte="台北忠烈祠" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/1368/m/A58206.jpg" alt="台北忠烈祠"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1368" tilte="台北忠烈祠" target="_blank">台北忠烈祠</a>
+       </div>
+       <div class="place">
+        台北市中山區北安路139號<a href="https://www.google.com.tw/maps/search/25.07873,121.533132" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>忠烈祠位在圓山飯店旁，背倚青山，面臨基隆河。建於西元1969年，主建築型式仿北京故宮太和殿，雄偉壯麗宏偉，象徵著烈士們成仁取義的大無畏精神。圍繞於忠烈祠四周的1萬餘坪的青草地，更烘托出建築物的莊嚴。祠內供奉...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/56" tilte="台北植物園" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/56/m/008.jpg" alt="台北植物園"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/56" tilte="台北植物園" target="_blank">台北植物園</a>
+       </div>
+       <div class="place">
+        臺北市中正區南海路53號<a href="https://www.google.com.tw/maps/search/25.031211,121.510191" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>植物園自1921年創設，位在南海路上，乃屬林業試驗所所有，佔地１５頃，栽培面積約１１公頃，園區內栽種植物多達２０００餘種，以亞熱帶樹種為主，並依赫欽氏植物分系統分成十七個區分別種植，其中又以繁花異木及荷花池...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1967" tilte="台北太平洋SOGO百貨-忠孝館" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/1967/m/001.JPG" alt="台北太平洋SOGO百貨-忠孝館"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1967" tilte="台北太平洋SOGO百貨-忠孝館" target="_blank">台北太平洋SOGO百貨-忠孝館</a>
+       </div>
+       <div class="place">
+        台北市大安區忠孝東路四段45號<a href="https://www.google.com.tw/maps/search/25.0418928,121.5446669" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>太平洋SOGO百貨，具有高品味、高格調、體貼、安全舒適、商品豐富、氣氛明朗、重視社會責任、能提供全系列商品及服務且顧及全家人的需求，更重視每位顧客的權益，自服務人員的應對禮儀、作業制度的規劃及各項硬體設施的...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1997" tilte="台北當代藝術館" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/1997/m/055.JPG" alt="台北當代藝術館"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1997" tilte="台北當代藝術館" target="_blank">台北當代藝術館</a>
+       </div>
+       <div class="place">
+        臺北市大同區長安西路39號<a href="https://www.google.com.tw/maps/search/25.050477,121.518872" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>位於台北市長安西路上，歷經古蹟活化再利用而成立的台北當代藝術館，在國內藝術界長期的關注之下，於二００一年五月正式璀璨開館，而這也是台灣第一座以推廣當代藝術為宗旨的美術館。這座以紅磚、灰瓦為建築材料的建築...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/2583" tilte="台北轉運站" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/2583/m/002.JPG" alt="台北轉運站"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/2583" tilte="台北轉運站" target="_blank">台北轉運站</a>
+       </div>
+       <div class="place">
+        台北市大同區市民大道一段209號<a href="https://www.google.com.tw/maps/search/25.0487857,121.518569" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>「台北轉運站」坐落於台北車站的北方，承德路與市民大道交岔路口附近；是台灣第一座集合國道客運車站、購物中心、影城、飯店等不同類型設施的大型多工能建築。內部的建築分為「轉運站」與「京站」兩個部份；轉運站為樓...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic">
+        <a href="/scenic/1367" tilte="台北探索館" target="_blank"><img src="//pic.easytravel.com.tw/Attachments/2/1367/m/001.jpg" alt="台北探索館"></a>
+       </div>
+       <div class="name">
+        <a href="/scenic/1367" tilte="台北探索館" target="_blank">台北探索館</a>
+       </div>
+       <div class="place">
+        台北市信義區市府路1號<a href="https://www.google.com.tw/maps/search/25.037525,121.563782" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>台北探索館主要在探尋台北市歷史文化的軌跡，可使觀眾了解過去及現在台北的自然生態、人文、社會及各項休閒的發展情形，也可以引導觀眾想像台北的未來，讓你不須走遍台北大街小巷，也無讀遍書籍資料，只要動動手、動動...</p>
+       </div>
+       <div class="clear"></div></li>
+      <li>
+       <div class="pic"></div>
+       <div class="name">
+        <a href="/scenic/2758" tilte="台北彩虹3C資訊廣場" target="_blank">台北彩虹3C資訊廣場</a>
+       </div>
+       <div class="place">
+        台北市中正區忠孝西路一段50號<a href="https://www.google.com.tw/maps/search/25.046355,121.515847" target="_blank" class="map">地圖</a>
+       </div>
+       <hr>
+       <div class="desc">
+        <p>彩虹3C資訊廣場站前店位於台北市中正區，由於所在位置剛好靠近繁華的台北車站商圈，是大台北地區最著名的人潮集散之地。彩虹3C資訊廣場內集合了多家原廠的電子商品展售中心，電腦DIY的周邊商店一應俱全，另外也提供多...</p>
+       </div>
+       <div class="clear"></div></li>
+     </ol>
+     <div class="loading" id="JS_Loading">
+      <img src="/images/loading.gif">
+     </div>
+     <div class="page" id="JS_Page">
+      &nbsp;<b>1</b>&nbsp;<a href="/search/?s_city=0&amp;s_class=&amp;s_key=台北&amp;page=2" title="第2頁">2</a><a href="/search/?s_city=0&amp;s_class=&amp;s_key=台北&amp;page=3" title="第3頁">3</a><a href="/search/?s_city=0&amp;s_class=&amp;s_key=台北&amp;page=4" title="第4頁">4</a><a href="/search/?s_city=0&amp;s_class=&amp;s_key=台北&amp;page=5" title="第5頁">5</a><a href="/search/?s_city=0&amp;s_class=&amp;s_key=台北&amp;page=2" title="下一頁" id="JS_Page_Next">下一頁</a>
+     </div>
+    </section>
+    <aside id="city">
+     <h3>熱門飯店</h3>
+     <ul>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=7433" tilte="楓華蜜雪兒精品旅館" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/picture/s/7433_201511261627251934_268.JPG" alt="楓華蜜雪兒精品旅館">
+        </div>
+        <div class="name">
+         楓華蜜雪兒精品旅館...
+        </div>
+        <div class="price">
+         <span class="place">彰化縣員林鎮</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=4715" tilte="草嶺SPA渡假山莊" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/4715_pf.jpg" alt="草嶺SPA渡假山莊">
+        </div>
+        <div class="name">
+         草嶺SPA渡假山莊
+        </div>
+        <div class="price">
+         <span class="place">雲林縣古坑鄉</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=6803" tilte="閤家溫泉會館" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/picture/s/6803_202208051152073657_403.JPG" alt="閤家溫泉會館">
+        </div>
+        <div class="name">
+         閤家溫泉會館
+        </div>
+        <div class="price">
+         <span class="place">南投縣仁愛鄉</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=6978" tilte="智凰科技飯店" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/6978_pf_s.jpg" alt="智凰科技飯店">
+        </div>
+        <div class="name">
+         智凰科技飯店
+        </div>
+        <div class="price">
+         <span class="place">基隆市仁愛區</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=7626" tilte="東里家風民宿" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/7626_pf_s.jpg" alt="東里家風民宿">
+        </div>
+        <div class="name">
+         東里家風民宿
+        </div>
+        <div class="price">
+         <span class="place">苗栗縣苑裡鎮</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=7757" tilte="天際線民宿" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/7757_pf_s.jpg" alt="天際線民宿">
+        </div>
+        <div class="name">
+         天際線民宿
+        </div>
+        <div class="price">
+         <span class="place">屏東縣恆春鎮</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=8049" tilte="御花園(嘉義館)商務汽車旅館" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/8049_pf_s.jpg" alt="御花園(嘉義館)商務汽車旅館">
+        </div>
+        <div class="name">
+         御花園(嘉義館)商務汽...
+        </div>
+        <div class="price">
+         <span class="place">嘉義市嘉義市</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=8111" tilte="日日春民宿" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/8111_pf_s.jpg" alt="日日春民宿">
+        </div>
+        <div class="name">
+         日日春民宿
+        </div>
+        <div class="price">
+         <span class="place">新竹縣尖石鄉</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=8696" tilte="水舞間民宿" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/flash/8696_f1.jpg" alt="水舞間民宿">
+        </div>
+        <div class="name">
+         水舞間民宿
+        </div>
+        <div class="price">
+         <span class="place">宜蘭縣冬山鄉</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=9014" tilte="蓮園商務旅館" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/picture/s/9014_201607131732266575_59.JPG" alt="蓮園商務旅館">
+        </div>
+        <div class="name">
+         蓮園商務旅館
+        </div>
+        <div class="price">
+         <span class="place">桃園市中壢區</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=9186" tilte="山雲花民宿" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/picture/s/9186_201602031432281523_291.jpg" alt="山雲花民宿">
+        </div>
+        <div class="name">
+         山雲花民宿
+        </div>
+        <div class="price">
+         <span class="place">嘉義縣梅山鄉</span>
+        </div></a></li>
+      <li><a href="http://www.easytravel.com.tw/ehotel/Default.aspx?n=9299" tilte="馬祖星漾海景民宿" target="_blank">
+        <div class="pic">
+         <img src="//www.easytravel.com.tw/ehotel/hotelimg/himg/9299_pf_s.jpg" alt="馬祖星漾海景民宿">
+        </div>
+        <div class="name">
+         馬祖星漾海景民宿
+        </div>
+        <div class="price">
+         <span class="place">馬祖北竿鄉</span>
+        </div></a></li>
+     </ul>
+    </aside>
+   </article>
+   <div id="ad">
+    <ul>
+     <li><a href="http://www.easytravel.com.tw/hplink.aspx?i=3&amp;p=1&amp;n=24307" target="_blank" title="LINE@"><img src="//www.easytravel.com.tw/upload/ADV/AdvPhoto_202212301530561_FQBEG.jpg" alt="LINE@"></a></li>
+     <li><a href="http://www.easytravel.com.tw/hplink.aspx?i=3&amp;p=1&amp;n=24311" target="_blank" title="租車網"><img src="//www.easytravel.com.tw/upload/ADV/AdvPhoto_202212301531501_GSQD2.jpg" alt="租車網"></a></li>
+     <li><a href="http://www.easytravel.com.tw/hplink.aspx?i=3&amp;p=1&amp;n=24308" target="_blank" title="國旅卡活動頁"><img src="//www.easytravel.com.tw/upload/ADV/AdvPhoto_202212301531091_N60AC.jpg" alt="國旅卡活動頁"></a></li>
+     <li><a href="http://www.easytravel.com.tw/hplink.aspx?i=3&amp;p=1&amp;n=24309" target="_blank" title="行動支付最方便"><img src="//www.easytravel.com.tw/upload/ADV/AdvPhoto_202212301531221_CFN9R.jpg" alt="行動支付最方便"></a></li>
+     <li><a href="http://www.easytravel.com.tw/hplink.aspx?i=3&amp;p=1&amp;n=24310" target="_blank" title="全台特色民宿搜尋網"><img src="//www.easytravel.com.tw/upload/ADV/AdvPhoto_202212301531351_4QXOS.jpg" alt="全台特色民宿搜尋網"></a></li>
+    </ul>
+   </div>
+   <div id="link">
+    <ul>
+     <li><a href="https://chiayi.easytravel.com.tw" title="嘉義住宿" target="_blank">嘉義住宿</a></li>
+     <li><a href="https://kaohsiung.easytravel.com.tw" title="高雄住宿" target="_blank">高雄住宿</a></li>
+     <li><a href="https://yilan.easytravel.com.tw" title="宜蘭住宿" target="_blank">宜蘭住宿</a></li>
+     <li><a href="https://hualien.easytravel.com.tw" title="花蓮住宿" target="_blank">花蓮住宿</a></li>
+     <li><a href="https://taitung.easytravel.com.tw" title="台東住宿" target="_blank">台東住宿</a></li>
+     <li><a href="https://taipei.easytravel.com.tw" title="台北住宿" target="_blank">台北住宿</a></li>
+     <li><a href="https://hsinchu.easytravel.com.tw" title="新竹住宿" target="_blank">新竹住宿</a></li>
+    </ul>
+   </div>
+  </div>
+  <footer>
+   <div class="content">
+    <section>
+     <h4>旅遊景點</h4>
+     <ul>
+      <li><a href="/city/1" title="基隆景點">基隆</a></li>
+      <li><a href="/city/8" title="苗栗景點">苗栗</a></li>
+      <li><a href="/city/21" title="嘉義景點">嘉義市</a></li>
+      <li><a href="/city/23" title="花蓮景點">花蓮</a></li>
+      <li><a href="/city/25" title="澎湖景點">澎湖</a></li>
+      <li><a href="/city/2" title="台北景點">台北</a></li>
+      <li><a href="/city/9" title="台中景點">台中</a></li>
+      <li><a href="/city/12" title="嘉義景點">嘉義縣</a></li>
+      <li><a href="/city/24" title="台東景點">台東</a></li>
+      <li><a href="/city/13" title="金門景點">金門</a></li>
+      <li><a href="/city/3" title="新北景點">新北</a></li>
+      <li><a href="/city/11" title="彰化景點">彰化</a></li>
+      <li><a href="/city/18" title="台南景點">台南</a></li>
+      <li></li>
+      <li><a href="/city/14" title="馬祖景點">馬祖</a></li>
+      <li><a href="/city/4" title="桃園景點">桃園</a></li>
+      <li><a href="/city/15" title="南投景點">南投</a></li>
+      <li><a href="/city/19" title="高雄景點">高雄</a></li>
+      <li></li>
+      <li><a href="/city/26" title="蘭嶼景點">蘭嶼</a></li>
+      <li><a href="/city/5" title="新竹景點">新竹市</a></li>
+      <li><a href="/city/16" title="雲林景點">雲林</a></li>
+      <li><a href="/city/22" title="屏東景點">屏東</a></li>
+      <li></li>
+      <li><a href="/city/27" title="綠島景點">綠島</a></li>
+      <li><a href="/city/6" title="新竹景點">新竹縣</a></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li><a href="/city/28" title="小琉球景點">小琉球</a></li>
+      <li><a href="/city/7" title="宜蘭景點">宜蘭</a></li>
+     </ul>
+    </section>
+    <section>
+     <h4>推薦行程</h4>
+     <ul>
+      <li><a href="/city2/1" title="基隆行程">基隆</a></li>
+      <li><a href="/city2/8" title="苗栗行程">苗栗</a></li>
+      <li><a href="/city2/21" title="嘉義行程">嘉義市</a></li>
+      <li><a href="/city2/23" title="花蓮行程">花蓮</a></li>
+      <li><a href="/city2/25" title="澎湖行程">澎湖</a></li>
+      <li><a href="/city2/2" title="台北行程">台北</a></li>
+      <li><a href="/city2/9" title="台中行程">台中</a></li>
+      <li><a href="/city2/12" title="嘉義行程">嘉義縣</a></li>
+      <li><a href="/city2/24" title="台東行程">台東</a></li>
+      <li><a href="/city2/13" title="金門行程">金門</a></li>
+      <li><a href="/city2/3" title="新北行程">新北</a></li>
+      <li><a href="/city2/11" title="彰化行程">彰化</a></li>
+      <li><a href="/city2/18" title="台南行程">台南</a></li>
+      <li></li>
+      <li><a href="/city2/14" title="馬祖行程">馬祖</a></li>
+      <li><a href="/city2/4" title="桃園行程">桃園</a></li>
+      <li><a href="/city2/15" title="南投行程">南投</a></li>
+      <li><a href="/city2/19" title="高雄行程">高雄</a></li>
+      <li></li>
+      <li><a href="/city2/26" title="蘭嶼行程">蘭嶼</a></li>
+      <li><a href="/city2/5" title="新竹行程">新竹市</a></li>
+      <li><a href="/city2/16" title="雲林行程">雲林</a></li>
+      <li><a href="/city2/22" title="屏東行程">屏東</a></li>
+      <li></li>
+      <li><a href="/city2/27" title="綠島行程">綠島</a></li>
+      <li><a href="/city2/6" title="新竹行程">新竹縣</a></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li><a href="/city2/28" title="小琉球行程">小琉球</a></li>
+      <li><a href="/city2/7" title="宜蘭行程">宜蘭</a></li>
+     </ul>
+    </section>
+   </div>
+   <div class="copyright">
+    Copyright © 四方通行 台灣旅遊景點行程
+   </div>
+   <div class="top" id="JS_TopBtn">
+    TOP
+   </div>
+  </footer>
+  <div id="TaiwanTravelScenic"></div>
+  <script language="Javascript">
+$(document).ready(function () {
+    // 自動載入資料
+    $(window).bind("scroll resize", function () {
+        if ($(document).height() - ($(this).scrollTop() + $(this).height()) < 600) {
+            LoadData(MoreLink);
+        }
+    });
+});
+
+var MoreLink = "";
+function LoadData() {
+    if (MoreLink !== $("#JS_Page #JS_Page_Next").attr("href")) {
+        MoreLink = $("#JS_Page #JS_Page_Next").attr("href");
+
+        if (MoreLink != undefined && MoreLink != "") {
+            $.ajax({
+                type: "GET",
+                url: MoreLink,
+                cache: false,
+                dataType: "html",
+                success: function (data) {
+                    var ListData = $(data).find("#JS_List").html();
+                    $("#JS_List").append(ListData);
+
+                    var PageData = $(data).find("#JS_Page").html();
+                    $("#JS_Page").html(PageData);
+                    
+                    $("#JS_Loading").hide();
+                },
+                beforeSend: function () {
+                    $("#JS_Loading").show();
+                },
+                complete: function () {
+                    $("#JS_Loading").hide();
+                }
+            });
+        } else {
+            $("#JS_Page").html("");
+        }
+    }
+}
+</script>
+ </body>
+</html>
