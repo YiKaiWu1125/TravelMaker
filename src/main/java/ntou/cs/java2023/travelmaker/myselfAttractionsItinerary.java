@@ -1,6 +1,7 @@
 package ntou.cs.java2023.travelmaker;
-public class myselfAttractionsItinerary implements attractions {//自行建立景點行程
+public class myselfAttractionsItinerary extends attractionsItinerary {//自行建立景點行程
     myselfAttractionsItinerary(){
-        System.out.println("myselfAttractionsItinerary");
+        super();
+        setUrl("https://null");
     }
 }
