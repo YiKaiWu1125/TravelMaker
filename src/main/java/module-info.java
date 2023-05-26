@@ -4,6 +4,7 @@ module ntou.cs.java2023.travelmaker {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires org.jsoup;
 
     opens ntou.cs.java2023.travelmaker to javafx.fxml;
     exports ntou.cs.java2023.travelmaker;
