@@ -1,5 +1,5 @@
 package ntou.cs.java2023.travelmaker;
-public abstract class attractionsItinerary implements attractions { //景點行程
+public abstract class AttractionsItinerary implements Attractions { //景點行程
     private String attractions;
     private String address;
     private String phone;
@@ -12,11 +12,19 @@ public abstract class attractionsItinerary implements attractions { //景點行�
     private int hour;
     private int minute;
 
-    private String url;
-    public void attractionsItinerary(){
+    AttractionsItinerary(){
         year = month = day = hour = minute = 0;
         isBooking = false;
         attractions = address = phone = businessTime = price = null;
+    }
+    AttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price){
+        year = month = day = hour = minute = 0;
+        isBooking = false;
+        this.attractions = attractions; 
+        this.address = address; 
+        this.phone = phone; 
+        this.businessTime = businessTime; 
+        this.price = price; 
     }
     @Override
     public String getAttraction() {
@@ -39,14 +47,6 @@ public abstract class attractionsItinerary implements attractions { //景點行�
         return price;
     }
     @Override
-    public String getUrl(){
-        return url;
-    }
-    @Override
-    public void setUrl(String url){
-        this.url = url;
-    }
-    @Override
     public void setHour(int hour) {
         this.hour = hour;
     }
@@ -62,4 +62,14 @@ public abstract class attractionsItinerary implements attractions { //景點行�
     public void isBooking(boolean isBooking){
         this.isBooking = isBooking;
     }
+    //@Override
+    //public String toString(){
+    //    String s = "";
+    //    s+=String.format("\n\s\n",getAttraction());
+    //    s+=String.format("電話：%s\n" + getPhone());
+    //    s+=String.format("地址：%s\n" + getAddress());
+    //    s+=String.format("營業時間：%s\n" + getBusinessTime());
+    //    s+=String.format("門票：%s\n"+getPrice());
+    //    return s;
+    //}
 }
