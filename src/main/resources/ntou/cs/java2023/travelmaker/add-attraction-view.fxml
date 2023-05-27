@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.AddAttractionController">
+    <Label contentDisplay="CENTER" prefHeight="62.0" prefWidth="190.0" text="新增景點" textAlignment="CENTER" AnchorPane.leftAnchor="415.0" AnchorPane.rightAnchor="416.0" AnchorPane.topAnchor="25.0">
+        <font>
+            <Font name="System Bold Italic" size="48.0" />
+        </font>
+    </Label>
+
+    <Button fx:id="cancelButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickCancelButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="取消" AnchorPane.leftAnchor="9.4">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+
+    <Button fx:id="saveButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickSaveButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="存檔" AnchorPane.rightAnchor="9.4">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+   <Label layoutX="284.0" layoutY="124.0" text="景點名稱" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="139.0">
+      <font>
+         <Font name="System Bold Italic" size="24.0" />
+      </font>
+   </Label>
+   <TextField fx:id="attractionField" layoutX="415.0" layoutY="120.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="135.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </TextField>
+   <Label layoutX="62.0" layoutY="198.0" text="地址" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="213.0">
+      <font>
+         <Font name="System Bold Italic" size="24.0" />
+      </font>
+   </Label>
+   <TextField fx:id="addressField" layoutX="172.0" layoutY="194.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="209.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </TextField>
+   <Label layoutX="53.0" layoutY="265.0" text="電話" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="287.0">
+      <font>
+         <Font name="System Bold Italic" size="24.0" />
+      </font>
+   </Label>
+   <TextField fx:id="phoneField" layoutX="172.0" layoutY="268.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="283.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </TextField>
+   <Label layoutX="53.0" layoutY="351.0" text="營業時間" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="361.0">
+      <font>
+         <Font name="System Bold Italic" size="24.0" />
+      </font>
+   </Label>
+   <TextField fx:id="businessTimeField" layoutX="172.0" layoutY="342.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="357.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </TextField>
+   <Label layoutX="53.0" layoutY="423.0" text="價位" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="435.0">
+      <font>
+         <Font name="System Bold Italic" size="24.0" />
+      </font></Label>
+   <TextField fx:id="priceField" layoutX="172.0" layoutY="416.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="431.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </TextField>
+</AnchorPane>

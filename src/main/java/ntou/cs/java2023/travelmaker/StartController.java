@@ -28,7 +28,7 @@ public class StartController {
 
             Stage searchStage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
-            searchStage.setTitle("Go Where?");
+            searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));
             searchStage.show();
