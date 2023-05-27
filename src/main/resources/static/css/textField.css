@@ -1,0 +1,13 @@
+.searchField {
+    -fx-border-color: #c2c3d2;
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 2px;
+}
+
+.addField {
+    -fx-border-color: #f2be5c;
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}

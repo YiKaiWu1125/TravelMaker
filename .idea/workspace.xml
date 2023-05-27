@@ -24,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/myselfAttractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/myselfAttractionsItinerary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/spide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/spide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/travelItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/travelItinerary.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,32 +63,12 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/50000/Desktop/TravelMaker/jsoup-1.16.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.48965517&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/TravelMaker&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\50000\Desktop\TravelMaker\src\main\java\ntou\cs\java2023\travelmaker" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="TravelMaker" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="TravelMaker" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -103,7 +84,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TravelMaker$Main.ic" NAME="Main Coverage Results" MODIFIED="1685129498647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TravelMaker$StartApplication.ic" NAME="StartApplication 覆盖结果" MODIFIED="1685193595063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ntou.cs.java2023.travelmaker.*</FILTER>
     </SUITE>
   </component>
