@@ -9,5 +9,8 @@
         <module name="GUI" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Export_Data" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
