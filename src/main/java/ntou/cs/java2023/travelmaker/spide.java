@@ -1,4 +1,12 @@
 package ntou.cs.java2023.travelmaker;
-public abstract class spide {//爬蟲
-    
+
+import javafx.util.Pair;
+
+import java.util.ArrayList;
+
+public abstract class Spide {//爬蟲
+
+    public abstract ArrayList<Pair<String, String>> crawlerPlace(String where) ;
+    public abstract Attractions crawlerPlaceData(String place, String keyword ) ;
+
 }
