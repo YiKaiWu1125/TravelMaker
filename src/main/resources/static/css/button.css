@@ -1,0 +1,42 @@
+.normalButton {
+    -fx-border-color: #f2be5c;
+    -fx-border-radius: 150;
+    -fx-background-radius: 150;
+    -fx-border-width: 3;
+    -fx-background-color: #FFFFFF;
+}
+
+.normalButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+.cartButton {
+    -fx-background-image: url('/static/images/cart.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.cartButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+
+.searchButton {
+    -fx-border-color: #c2c3d2;
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 2px;
+}
+
+.searchButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}

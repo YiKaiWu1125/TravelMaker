@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.StartController">
+<AnchorPane fx:id="anchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@/static/css/button.css" fx:controller="ntou.cs.java2023.travelmaker.StartController">
    <stylesheets></stylesheets>
    <children>
       <Button fx:id="startButton"
               layoutX="344.0"
               layoutY="430.0"
-              style="-fx-border-color:orange; -fx-border-radius:150; -fx-background-radius:150; -fx-border-width:3;"
+              styleClass="normalButton"
               mnemonicParsing="false"
               prefHeight="52.0"
               prefWidth="185.0"
