@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Spide s = new TwInfoSpide();
+        //Spide s = new TwInfoSpide();
         //Spide s = new OkgoSpide();
-        //Spide s = new EasyTravelSpide();
+        Spide s = new EasyTravelSpide();
         ArrayList<Pair<String, String>> arr = s.crawlerPlace("台中");
         System.out.println(arr);
         Attractions attractions = s.crawlerPlaceData(arr.get(0).getKey(),arr.get(0).getValue());

@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce8830ca-6e52-4374-9873-49cfb070a09a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/EasyTravelSpide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/OkgoSpide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/TwInfoSpide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/easyTravelAttractionsItinerary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/okgoAttractionsItinerary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/twInfoAttractionsItinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/attractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/attractions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/attractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/attractionsItinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ezTravelAttractionsItinerary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ezTravelSpide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/kkdayAttractionsItinerary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/kkdaySpide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/klookAttractionsItinerary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/klookSpide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/myselfAttractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/myselfAttractionsItinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/spide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/spide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/travelItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/travelItinerary.java" afterDir="false" />
-
-    </list>
+    <list default="true" id="ce8830ca-6e52-4374-9873-49cfb070a09a" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,6 +63,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TravelMaker$Main.ic" NAME="Main Coverage Results" MODIFIED="1685129498647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ntou.cs.java2023.travelmaker.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/TravelMaker$StartApplication.ic" NAME="StartApplication 覆盖结果" MODIFIED="1685193595063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ntou.cs.java2023.travelmaker.*</FILTER>
     </SUITE>
