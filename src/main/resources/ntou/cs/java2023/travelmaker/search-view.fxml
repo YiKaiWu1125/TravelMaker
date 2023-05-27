@@ -15,13 +15,13 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Button fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="68.0" text="搜尋" AnchorPane.rightAnchor="324.0" AnchorPane.topAnchor="62.0" styleClass="searchButton">
+      <Button fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="68.0" styleClass="searchButton" text="搜尋" AnchorPane.rightAnchor="324.0" AnchorPane.topAnchor="62.0">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="cart" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="68.0" style="" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="14.0" styleClass="cartButton"/>
-      <TableView fx:id="attractionsTable" layoutX="41.0" layoutY="133.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+      <Button fx:id="cart" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="68.0" style="" styleClass="cartButton" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="30.0" />
+      <TableView fx:id="attractionsTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
           <columns>
               <TableColumn fx:id="attractionColumn" prefWidth="139.3999786376953" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="景點名稱" />
               <TableColumn fx:id="addressColumn" prefWidth="188.40000915527344" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="地址" />
@@ -31,17 +31,17 @@
               <TableColumn fx:id="addOneColumn" prefWidth="50.0" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="加入" />
           </columns>
       </TableView>
-   <Label layoutX="41.0" layoutY="89.0" prefHeight="44.0" prefWidth="179.0" text="TOP10熱門景點">
+   <Label layoutX="41.0" layoutY="68.0" prefHeight="44.0" prefWidth="179.0" text="TOP10熱門景點">
       <font>
          <Font name="System Bold Italic" size="24.0" />
       </font>
    </Label>
-   <Button fx:id="searchNextButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="117.0" text="下一步" styleClass="normalButton">
+   <Button fx:id="searchNextButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="下一步">
       <font>
          <Font name="System Bold Italic" size="20.0" />
       </font>
    </Button>
-   <Button fx:id="addAttractionButton" layoutX="262.0" layoutY="514.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="227.0"  text="按我新增景點٩(｡・ω・｡)﻿و" styleClass="normalButton">
+   <Button fx:id="addAttractionButton" layoutX="262.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickAddAttractionButton" prefHeight="40.0" prefWidth="227.0" styleClass="normalButton" text="點我新增景點٩(｡・ω・｡)﻿و">
       <font>
          <Font size="16.0" />
       </font>

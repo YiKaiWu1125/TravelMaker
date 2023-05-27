@@ -1,17 +1,18 @@
 package ntou.cs.java2023.travelmaker;
 
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -166,6 +167,24 @@ public class SearchController implements Initializable{
                 new ViewPoint("台北轉運站", "台北市大同區市民大道一段209號", "02-77335888", "全日開放，商店依各店家營業時間。")
         ));
         attractionsTable.setFixedCellSize(150.0);
+    }
+
+    @FXML
+    private void clickAddAttractionButton(ActionEvent event) {
+        try {
+            Stage currentStage = (Stage) addAttractionButton.getScene().getWindow();
+            currentStage.close();
+
+            Stage addStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("add-attraction-view.fxml"));
+            addStage.setTitle("Travel Maker - 新增景點");
+            addStage.setResizable(false);
+            addStage.setScene(new Scene(root));
+            addStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
