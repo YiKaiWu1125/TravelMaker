@@ -12,6 +12,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EasyTravelSpide extends Spide{//四方爬蟲
+    EasyTravelSpide(String goWhere){
+        super(goWhere);
+    }
     public ArrayList<Pair<String, String>> crawlerPlace(String where){
         ArrayList<Pair<String, String>> placeName = new ArrayList<Pair<String, String>>();
         String url =  "https://guide.easytravel.com.tw/search/?&s_key=" + where;
@@ -110,11 +113,11 @@ public class EasyTravelSpide extends Spide{//四方爬蟲
 
             //output
             attractions = new EasyTravelAttractionsItinerary(place,address,telephone,openTime,ticket);
-            System.out.println("\n"+place);
-            System.out.println("電話：" + telephone);
-            System.out.println("地址：" + address);
-            System.out.println("營業時間：" + openTime);
-            System.out.println("門票："+ticket);
+            //System.out.println("\n"+place);
+            //System.out.println("電話：" + telephone);
+            //System.out.println("地址：" + address);
+            //System.out.println("營業時間：" + openTime);
+            //System.out.println("門票："+ticket);
 
         } catch (IOException e) {
             e.printStackTrace();

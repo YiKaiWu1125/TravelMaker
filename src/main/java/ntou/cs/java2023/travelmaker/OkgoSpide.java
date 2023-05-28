@@ -10,6 +10,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class OkgoSpide extends Spide{//爬蟲
+    OkgoSpide(String goWhere){
+        super(goWhere);
+    }
     //完全台灣
     @Override
     public ArrayList<Pair<String, String>> crawlerPlace(String where){
@@ -53,7 +56,7 @@ public class OkgoSpide extends Spide{//爬蟲
 
             //phone address
             Elements divs = doc.select("div.sec3.word.Resize");
-            System.out.println(divs);
+            //System.out.println(divs);
 
             // 正则表达式匹配电话号码
             String phoneRegex = "\\d{2}-\\d{8}";
@@ -79,11 +82,11 @@ public class OkgoSpide extends Spide{//爬蟲
             }
             //output
             attractions = new OkgoAttractionsItinerary(place,address,telephone,openTime,ticket);
-            System.out.println("\n"+place);
-            System.out.println("電話：" + telephone);
-            System.out.println("地址：" + address);
-            System.out.println("營業時間：" + openTime);
-            System.out.println("門票："+ticket);
+            //System.out.println("\n"+place);
+            //System.out.println("電話：" + telephone);
+            //System.out.println("地址：" + address);
+            //System.out.println("營業時間：" + openTime);
+            //System.out.println("門票："+ticket);
 
         } catch (IOException e) {
             e.printStackTrace();
