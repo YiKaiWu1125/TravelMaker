@@ -20,7 +20,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="cart" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="68.0" style="" styleClass="cartButton" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="30.0" />
+      <Button fx:id="cartButton" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickCartButton" prefHeight="68.0" prefWidth="68.0" style="" styleClass="cartButton" AnchorPane.bottomAnchor="7.6" AnchorPane.rightAnchor="9.4" />
       <TableView fx:id="attractionsTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
           <columns>
               <TableColumn fx:id="attractionColumn" prefWidth="139.3999786376953" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="景點名稱" />
@@ -36,11 +36,6 @@
          <Font name="System Bold Italic" size="24.0" />
       </font>
    </Label>
-   <Button fx:id="searchNextButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="下一步">
-      <font>
-         <Font name="System Bold Italic" size="20.0" />
-      </font>
-   </Button>
    <Button fx:id="addAttractionButton" layoutX="262.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickAddAttractionButton" prefHeight="40.0" prefWidth="227.0" styleClass="normalButton" text="點我新增景點٩(｡・ω・｡)﻿و">
       <font>
          <Font size="16.0" />
