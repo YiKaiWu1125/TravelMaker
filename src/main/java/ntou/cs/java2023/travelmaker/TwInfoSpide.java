@@ -12,7 +12,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TwInfoSpide extends Spide{//爬蟲
-
+    TwInfoSpide(String goWhere){
+        super(goWhere);
+    }
     @Override
     public ArrayList<Pair<String, String>> crawlerPlace(String where){
         ArrayList<Pair<String, String>> placeName = new ArrayList<Pair<String, String>>();
@@ -69,11 +71,11 @@ public class TwInfoSpide extends Spide{//爬蟲
             }
             //output
             attractions = new TwInfoAttractionsItinerary(place,address,telephone,openTime,ticket);
-            System.out.println("\n"+place);
-            System.out.println("電話：" + telephone);
-            System.out.println("地址：" + address);
-            System.out.println("營業時間：" + openTime);
-            System.out.println("門票："+ticket);
+            //System.out.println("\n"+place);
+            //System.out.println("電話：" + telephone);
+            //System.out.println("地址：" + address);
+            //System.out.println("營業時間：" + openTime);
+            //System.out.println("門票："+ticket);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (NullPointerException e){
