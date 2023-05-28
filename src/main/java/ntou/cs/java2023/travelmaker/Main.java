@@ -16,25 +16,31 @@ public class Main {
         //System.out.println(attractions);
 
 
-        //使用
+        ////使用
+        //SearchTopTen STT = new SearchTopTen();
+        //STT.search("台中");
+        //ArrayList<Attractions> attractionsList = STT.getTopTen();
+        ////印出
+        //int i = 1;
+        //for(Attractions attractions : attractionsList){
+        //    System.out.printf("%d : %s  %s %s %s %s%n",i++,attractions.getAttraction(), attractions.getAddress(), attractions.getPhone(), attractions.getPrice(), attractions.getBusinessTime());
+        //}
+        ////可重複使用
+        //STT.search("澎湖");
+        //attractionsList= STT.getTopTen();
+        ////印出
+        //i = 1;
+        //for(Attractions attractions : attractionsList){
+        //    System.out.printf("%d : %s  %s %s %s %s%n",i++,attractions.getAttraction(), attractions.getAddress(), attractions.getPhone(), attractions.getPrice(), attractions.getBusinessTime());
+        //}
         SearchTopTen STT = new SearchTopTen();
         STT.search("台中");
         ArrayList<Attractions> attractionsList = STT.getTopTen();
-
-        //印出
-        int i = 1;
+        TravelItinerary travelItinerary = new TravelItinerary();
         for(Attractions attractions : attractionsList){
-            System.out.printf("%d : %s  %s %s %s %s%n",i++,attractions.getAttraction(), attractions.getAddress(), attractions.getPhone(), attractions.getPrice(), attractions.getBusinessTime());
+            travelItinerary.addAttraction(attractions);
         }
-
-        //可重複使用
-        STT.search("澎湖");
-        attractionsList= STT.getTopTen();
-
-        //印出
-        i = 1;
-        for(Attractions attractions : attractionsList){
-            System.out.printf("%d : %s  %s %s %s %s%n",i++,attractions.getAttraction(), attractions.getAddress(), attractions.getPhone(), attractions.getPrice(), attractions.getBusinessTime());
-        }
+        travelItinerary.setExportType(new ExportFilePdf());
+        travelItinerary.runExport();
     }
 }
