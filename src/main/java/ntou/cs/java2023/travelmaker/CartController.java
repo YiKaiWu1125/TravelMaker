@@ -49,8 +49,8 @@ public class CartController {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
-            searchStage.setTitle("Travel Maker - Go Where?");
+            Parent root = FXMLLoader.load(getClass().getResource("export-view.fxml"));
+            searchStage.setTitle("Travel Maker - 選擇檔案匯出格式");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));
             searchStage.show();

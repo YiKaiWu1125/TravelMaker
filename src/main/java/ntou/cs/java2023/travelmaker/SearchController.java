@@ -25,8 +25,6 @@ public class SearchController implements Initializable{
     @FXML
     private Button addAttractionButton;
     @FXML
-    private Button searchNextButton;
-    @FXML
     private Button cartButton;
     @FXML
     private TableView<ViewPoint> attractionsTable;

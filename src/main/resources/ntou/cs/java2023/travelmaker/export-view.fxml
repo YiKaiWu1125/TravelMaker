@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css, @/static/css/dialog.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.ExportController">
+    <Label contentDisplay="CENTER" prefHeight="62.0" prefWidth="389.0" text="選擇檔案匯出格式" textAlignment="CENTER" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="25.0">
+        <font>
+            <Font name="System Bold Italic" size="48.0" />
+        </font>
+    </Label>
+    <Button fx:id="exportBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickExportBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+
+    <Button fx:id="exportFinishedButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickExportFinishedButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="完成" AnchorPane.rightAnchor="9.4">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+   <CheckBox layoutX="430.0" layoutY="134.0" mnemonicParsing="false" text="pdf">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="429.0" layoutY="232.0" mnemonicParsing="false" text="word">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="430.0" layoutY="320.0" mnemonicParsing="false" text="excel">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </CheckBox>
+
+</AnchorPane>
