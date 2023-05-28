@@ -5,6 +5,7 @@ public interface Attractions {   //景點
    public String getPhone();
    public String getBusinessTime();
    public String getPrice();
+   public String getIsBooking();
    public static String getFrontUrl(){return null;}
    public static String getBackUrl(){return null;}
    public void setHour(int hour);
