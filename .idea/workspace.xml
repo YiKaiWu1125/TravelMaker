@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb42e0ac-34f4-40a1-8df7-aef64ed562a2" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ChartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/search-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/search-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +43,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
