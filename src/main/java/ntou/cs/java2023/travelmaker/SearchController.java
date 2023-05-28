@@ -27,6 +27,8 @@ public class SearchController implements Initializable{
     @FXML
     private Button searchNextButton;
     @FXML
+    private Button cartButton;
+    @FXML
     private TableView<ViewPoint> attractionsTable;
     @FXML
     private TableColumn<ViewPoint, String> attractionColumn;
@@ -178,6 +180,24 @@ public class SearchController implements Initializable{
             Stage addStage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("add-attraction-view.fxml"));
             addStage.setTitle("Travel Maker - 新增景點");
+            addStage.setResizable(false);
+            addStage.setScene(new Scene(root));
+            addStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void clickCartButton(ActionEvent event) {
+        try {
+            Stage currentStage = (Stage) cartButton.getScene().getWindow();
+            currentStage.close();
+
+            Stage addStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("cart-view.fxml"));
+            addStage.setTitle("Travel Maker - 購物車");
             addStage.setResizable(false);
             addStage.setScene(new Scene(root));
             addStage.show();
