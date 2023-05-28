@@ -1,4 +1,4 @@
-package org.example;
+package ntou.cs.java2023.travelmaker;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;

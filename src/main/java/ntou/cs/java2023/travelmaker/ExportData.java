@@ -1,4 +1,4 @@
-package org.example;
+package ntou.cs.java2023.travelmaker;
 
 import java.util.Scanner;
 
