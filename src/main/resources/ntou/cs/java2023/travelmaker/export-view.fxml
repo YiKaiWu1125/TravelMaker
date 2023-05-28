@@ -16,7 +16,7 @@
         </font>
     </Button>
 
-    <Button fx:id="exportFinishedButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="完成" AnchorPane.rightAnchor="9.4">
+    <Button fx:id="exportBackToIndexButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickExportBackToIndexButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="結束" AnchorPane.rightAnchor="9.4">
         <font>
             <Font name="System Bold Italic" size="20.0" />
         </font>
