@@ -3,4 +3,7 @@ public class MyselfAttractionsItinerary extends AttractionsItinerary {//自行�
     MyselfAttractionsItinerary(){
         super();
     }
+    MyselfAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price, String source){
+        super(attractions, address, phone, businessTime, price, source);
+    }
 }
