@@ -5,6 +5,7 @@ public interface Attractions {   //景點
    public String getPhone();
    public String getBusinessTime();
    public String getPrice();
+   public String getSource();
    public String getIsBooking();
    public TimeData getBeginTime();
    public TimeData getEndTime();

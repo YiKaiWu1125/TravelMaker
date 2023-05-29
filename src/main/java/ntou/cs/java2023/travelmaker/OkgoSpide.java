@@ -81,7 +81,7 @@ public class OkgoSpide extends Spide{//爬蟲
                 address="無";
             }
             //output
-            attractions = new OkgoAttractionsItinerary(place,address,telephone,openTime,ticket);
+            attractions = new OkgoAttractionsItinerary(place,address,telephone,openTime,ticket, url);
             //System.out.println("\n"+place);
             //System.out.println("電話：" + telephone);
             //System.out.println("地址：" + address);

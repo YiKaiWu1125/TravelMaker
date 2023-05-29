@@ -5,23 +5,25 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     private String address;
     private String phone;
     private String businessTime;
-    private  String price;
+    private String price;
+    private String source;
     private boolean isBooking;
     private TimeData beginTime;
     private TimeData endTime;
     private JCheckBox checkBox = new JCheckBox("");
 
     AttractionsItinerary(){
-        this("","","","","");
+        this("","","","","", "");
     }
-    AttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price){
+    AttractionsItinerary(String attractions,String address ,String phone ,String businessTime ,String price, String source){
         beginTime = endTime = new TimeData();
         isBooking = false;
         this.attractions = attractions; 
         this.address = address; 
         this.phone = phone; 
         this.businessTime = businessTime; 
-        this.price = price; 
+        this.price = price;
+        this.source = source;
     }
     @Override
     public String getAttraction() {
@@ -42,6 +44,10 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     @Override
     public String getPrice(){
         return price;
+    }
+    @Override
+    public String getSource(){
+        return source;
     }
     @Override
     public String getIsBooking(){return isBooking?"訂購完成":"尚未訂購";}
@@ -70,6 +76,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         s += String.format("電話：%s\n", this.getPhone());
         s += String.format("營業時間：%s\n", this.getBusinessTime());
         s += String.format("門票：%s\n", this.getPrice());
+        s += String.format("來源：%s\n", this.getSource());
         s += "              ";
         System.out.println(s);
         return s;

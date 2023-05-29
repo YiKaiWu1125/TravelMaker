@@ -25,7 +25,7 @@ public class TwInfoSpide extends Spide{//爬蟲
     }
     @Override
     public Attractions crawlerPlaceData(String place,String keyword ){//die 我做不到提取門票時間QQ
-        String url = url = "http://zip5.5432.tw/poi/?name=" + keyword;
+        String url  = "http://zip5.5432.tw/poi/?name=" + keyword;
         String telephone = "";
         String address = "";
         String openTime = "";
@@ -70,7 +70,7 @@ public class TwInfoSpide extends Spide{//爬蟲
                 }
             }
             //output
-            attractions = new TwInfoAttractionsItinerary(place,address,telephone,openTime,ticket);
+            attractions = new TwInfoAttractionsItinerary(place,address,telephone,openTime,ticket, url);
             //System.out.println("\n"+place);
             //System.out.println("電話：" + telephone);
             //System.out.println("地址：" + address);
