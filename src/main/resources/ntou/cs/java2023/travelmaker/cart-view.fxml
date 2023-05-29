@@ -4,12 +4,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.CartController">
+<AnchorPane fx:id="cartAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.CartController">
     <Label contentDisplay="CENTER" prefHeight="62.0" prefWidth="144.0" text="購物車" textAlignment="CENTER" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="440.0" AnchorPane.topAnchor="25.0">
         <font>
             <Font name="System Bold Italic" size="48.0" />
         </font>
     </Label>
+    <DatePicker layoutX="48.0" layoutY="97.0" prefHeight="23.0" prefWidth="126.0" />
+
+
     <Button fx:id="cartBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickCartBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4">
         <font>
             <Font name="System Bold Italic" size="20.0" />
@@ -21,6 +24,25 @@
             <Font name="System Bold Italic" size="20.0" />
         </font>
     </Button>
+    <ComboBox fx:id="hourComboBox" layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="80.0" />
+    <ComboBox fx:id="minuteComboBox" layoutX="114.0" layoutY="14.0" prefWidth="80.0" />
+
+    <Label layoutX="48.0" layoutY="63.0" text="請選擇出發日期">
+       <font>
+          <Font name="System Bold Italic" size="18.0" />
+       </font>
+    </Label>
+    <TableView fx:id="attractionsTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+        <columns>
+            <TableColumn fx:id="attractionColumn" prefWidth="139.3999786376953" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="景點名稱" />
+            <TableColumn fx:id="addressColumn" prefWidth="188.40000915527344" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="地址" />
+            <TableColumn fx:id="phoneColumn" prefWidth="152.79998779296875" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="電話" />
+            <TableColumn fx:id="businessTimeColumn" minWidth="0.0" prefWidth="178.4000244140625" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="營業時間" />
+            <TableColumn fx:id="priceColumn" prefWidth="221.20001220703125" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="價位" />
+            <TableColumn fx:id="addOneColumn" prefWidth="50.0" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="加入" />
+            <TableColumn fx:id="sourceColumn" prefWidth="150.0" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF ; -fx-border-color: #F6DAA5;" text="資料來源" />
+        </columns>
+    </TableView>
 
 
 </AnchorPane>

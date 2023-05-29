@@ -4,17 +4,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" stylesheets="@/static/css/button.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.StartController">
-   <children>
-      <Button fx:id="startButton" layoutX="344.0" layoutY="430.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="52.0" prefWidth="150.0" styleClass="normalButton" text="Start" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="430.0">
-         <font>
-            <Font name="Comic Sans MS" size="25.0" />
-         </font>
-      </Button>
-      <Button fx:id="openButton" layoutX="344.0" layoutY="430.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="52.0" prefWidth="150.0" styleClass="normalButton" text="開啟舊檔" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="430.0">
-         <font>
-            <Font name="System Bold Italic" size="25.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane fx:id="anchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" stylesheets="@/static/css/button.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.StartController">
+    <children>
+        <Button fx:id="startButton" layoutX="344.0" layoutY="430.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="52.0" prefWidth="150.0" styleClass="normalButton" text="Start" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="430.0">
+            <font>
+                <Font name="Comic Sans MS" size="25.0" />
+            </font>
+        </Button>
+        <Button fx:id="openButton" layoutX="344.0" layoutY="430.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="52.0" prefWidth="150.0" styleClass="normalButton" text="開啟舊檔" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="430.0">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Button>
+    </children>
 </AnchorPane>

@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e439b2c2-e093-4f9c-970e-15695d6c9821" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/alert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/checkBox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ViewPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ViewPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/export-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/export-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/search-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/search-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/start-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/start-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/dialog.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.3275862",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RunManager">
@@ -73,5 +73,9 @@
       <updated>1685390494172</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

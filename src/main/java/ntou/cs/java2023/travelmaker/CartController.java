@@ -11,18 +11,52 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import javafx.util.StringConverter;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.SplittableRandom;
 
-public class CartController {
+public class CartController implements Initializable {
 
     @FXML
     private Button cartBackButton;
     @FXML
     private Button cartNextButton;
+    @FXML
+    private ComboBox<Integer> hourComboBox;
+    @FXML
+    private ComboBox<Integer> minuteComboBox;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        hourComboBox.setItems(FXCollections.observableArrayList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23));
+        hourComboBox.setConverter(new StringConverter<Integer>() {
+            @Override
+            public String toString(Integer object) {
+                return String.format("%02d", object);
+            }
+
+            @Override
+            public Integer fromString(String s) {
+                return Integer.parseInt(s);
+            }
+        });
+
+        minuteComboBox.setItems(FXCollections.observableArrayList(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55));
+        minuteComboBox.setConverter(new StringConverter<Integer>() {
+            @Override
+            public String toString(Integer object) {
+                return String.format("%02d", object);
+            }
+
+            @Override
+            public Integer fromString(String s) {
+                return Integer.parseInt(s);
+            }
+        });
+
+    }
 
     @FXML
     private void clickCartBackButton(ActionEvent event) {

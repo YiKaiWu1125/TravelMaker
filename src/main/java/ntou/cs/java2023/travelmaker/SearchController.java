@@ -42,6 +42,8 @@ public class SearchController implements Initializable{
     private TableColumn<ViewPoint, String> priceColumn;
     @FXML
     private TableColumn<ViewPoint, CheckBox> addOneColumn;
+    @FXML
+    private TableColumn<ViewPoint, String> sourceColumn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
