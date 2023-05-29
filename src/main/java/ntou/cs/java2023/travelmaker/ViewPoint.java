@@ -2,6 +2,7 @@ package ntou.cs.java2023.travelmaker;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.text.Font;
 
 public class ViewPoint {
@@ -11,7 +12,7 @@ public class ViewPoint {
     private String businessTime;
     private String price;
     @FXML
-    private Button addOne;
+    private CheckBox addOne;
 
     public ViewPoint(String attraction, String address, String phone, String businessTime, String price) {
         this.attraction = attraction;
@@ -20,10 +21,8 @@ public class ViewPoint {
         this.businessTime = businessTime;
         this.price = price;
 
-        addOne = new Button();
-        addOne.setStyle("-fx-background-image: url('/static/images/cart.png'); -fx-background-repeat: no-repeat; -fx-background-size: 30px 30px; -fx-border-color: #f2be5c; -fx-border-width: 3; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-background-color: #FFFFFF; -fx-background-position: center;");
-        addOne.setPrefWidth(40.0);
-        addOne.setPrefHeight(40.0);
+        addOne = new CheckBox();
+        addOne.getStyleClass().add("check-box");
     }
 
     public ViewPoint(String attraction, String address, String phone, String businessTime) {
@@ -33,10 +32,8 @@ public class ViewPoint {
         this.businessTime = businessTime;
         setPrice();
 
-        addOne = new Button();
-        addOne.setStyle("-fx-background-image: url('/static/images/cart.png'); -fx-background-repeat: no-repeat; -fx-background-size: 30px 30px; -fx-border-color: #f2be5c; -fx-border-width: 3; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-background-color: #FFFFFF; -fx-background-position: center;");
-        addOne.setPrefWidth(40.0);
-        addOne.setPrefHeight(40.0);
+        addOne = new CheckBox();
+        addOne.getStyleClass().add("check-box");
     }
 
     public String getAttraction() {
@@ -59,11 +56,15 @@ public class ViewPoint {
         return price;
     }
 
-    public Button getAddOne() {
+    public CheckBox getAddOne() {
         return addOne;
     }
 
     public void setPrice(){
         this.price = "";
+    }
+
+    public void setAddOne(boolean selected){
+        addOne.setSelected(selected);
     }
 }

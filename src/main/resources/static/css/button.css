@@ -40,3 +40,67 @@
 .button:hover {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
 }
+
+.pdfButton {
+    -fx-background-image: url('/static/images/pdf.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100px 100px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.pdfButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+.excelButton {
+    -fx-background-image: url('/static/images/excel.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100px 100px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.excelButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+.wordButton {
+    -fx-background-image: url('/static/images/word.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100px 100px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.wordButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+.jsonButton {
+    -fx-background-image: url('/static/images/json.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100px 100px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.jsonButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}

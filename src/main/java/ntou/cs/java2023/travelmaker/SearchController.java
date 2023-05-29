@@ -25,7 +25,9 @@ public class SearchController implements Initializable{
     @FXML
     private Button addAttractionButton;
     @FXML
-    private Button searchNextButton;
+    private Button cartButton;
+    @FXML
+    private Button searchSubmitButton;
     @FXML
     private TableView<ViewPoint> attractionsTable;
     @FXML
@@ -39,7 +41,7 @@ public class SearchController implements Initializable{
     @FXML
     private TableColumn<ViewPoint, String> priceColumn;
     @FXML
-    private TableColumn<ViewPoint, Button> addOneColumn;
+    private TableColumn<ViewPoint, CheckBox> addOneColumn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -138,16 +140,16 @@ public class SearchController implements Initializable{
 
         addOneColumn.setCellFactory(new Callback<>() {
             @Override
-            public TableCell<ViewPoint, Button> call(TableColumn<ViewPoint, Button> param) {
+            public TableCell<ViewPoint, CheckBox> call(TableColumn<ViewPoint, CheckBox> param) {
                 return new TableCell<>() {
                     @Override
-                    protected void updateItem(Button button, boolean empty) {
-                        super.updateItem(button, empty);
+                    protected void updateItem(CheckBox checkBox, boolean empty) {
+                        super.updateItem(checkBox, empty);
 
                         if (empty) {
                             setGraphic(null);
                         } else {
-                            setGraphic(button);
+                            setGraphic(checkBox);
                         }
                     }
                 };
@@ -185,6 +187,43 @@ public class SearchController implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void clickCartButton(ActionEvent event) {
+        try {
+            Stage currentStage = (Stage) cartButton.getScene().getWindow();
+            currentStage.close();
+
+            Stage addStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("cart-view.fxml"));
+            addStage.setTitle("Travel Maker - 購物車");
+            addStage.setResizable(false);
+            addStage.setScene(new Scene(root));
+            addStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void clickSearchSubmitButton(ActionEvent event) {    // Iterate over the items in the table
+        for (ViewPoint item : attractionsTable.getItems()) {
+            // Clear the checkbox by setting the "addOne" property to false
+            item.setAddOne(false);
+        }
+
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success！");
+        alert.setHeaderText(null);
+        alert.setContentText("已成功新增至購物車！");
+
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(getClass().getResource("/static/css/alert.css").toExternalForm());
+
+        alert.showAndWait();
     }
 
 }
