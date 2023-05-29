@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/searchPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.SearchController">
+<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/searchPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css , @/static/css/checkBox.css, @/static/css/alert.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.SearchController">
 
       <Label contentDisplay="CENTER" text="想去哪裡？" textAlignment="CENTER" AnchorPane.leftAnchor="392.0" AnchorPane.rightAnchor="392.0">
          <font>
@@ -20,7 +20,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="cartButton" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickCartButton" prefHeight="68.0" prefWidth="68.0" style="" styleClass="cartButton" AnchorPane.bottomAnchor="7.6" AnchorPane.rightAnchor="9.4" />
+      <Button fx:id="cartButton" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickCartButton" prefHeight="68.0" prefWidth="68.0" style="" styleClass="cartButton" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="34.0" />
       <TableView fx:id="attractionsTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
           <columns>
               <TableColumn fx:id="attractionColumn" prefWidth="139.3999786376953" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="景點名稱" />
@@ -41,4 +41,9 @@
          <Font size="16.0" />
       </font>
    </Button>
+    <Button fx:id="searchSubmitButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickSearchSubmitButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="提交" AnchorPane.rightAnchor="9.4">
+    <font>
+        <Font name="System Bold Italic" size="20.0" />
+    </font>
+    </Button>
 </AnchorPane>
