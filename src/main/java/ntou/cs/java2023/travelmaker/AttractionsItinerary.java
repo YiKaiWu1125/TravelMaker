@@ -1,30 +1,29 @@
 package ntou.cs.java2023.travelmaker;
+import javax.swing.*;
 public abstract class AttractionsItinerary implements Attractions { //景點行程
     private String attractions;
     private String address;
     private String phone;
     private String businessTime;
-    private  String price;
+    private String price;
+    private String source;
     private boolean isBooking;
-    private int year;
-    private int month;
-    private int day;
-    private int hour;
-    private int minute;
+    private TimeData beginTime;
+    private TimeData endTime;
+    private JCheckBox checkBox = new JCheckBox("");
 
     AttractionsItinerary(){
-        year = month = day = hour = minute = 0;
-        isBooking = false;
-        attractions = address = phone = businessTime = price = "";
+        this("","","","","", "");
     }
-    AttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price){
-        year = month = day = hour = minute = 0;
+    AttractionsItinerary(String attractions,String address ,String phone ,String businessTime ,String price, String source){
+        beginTime = endTime = new TimeData();
         isBooking = false;
         this.attractions = attractions; 
         this.address = address; 
         this.phone = phone; 
         this.businessTime = businessTime; 
-        this.price = price; 
+        this.price = price;
+        this.source = source;
     }
     @Override
     public String getAttraction() {
@@ -47,31 +46,37 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         return price;
     }
     @Override
+    public String getSource(){
+        return source;
+    }
+    @Override
     public String getIsBooking(){return isBooking?"訂購完成":"尚未訂購";}
     @Override
-    public void setHour(int hour) {
-        this.hour = hour;
+    public TimeData getBeginTime(){return beginTime;}
+    @Override
+    public TimeData getEndTime(){return endTime;}
+    @Override
+    public void setBeginTime(TimeData beginTime){
+        this.beginTime = beginTime;
     }
     @Override
-    public void setMinute(int minute){
-        this.minute = minute;
+    public void setEndTime(TimeData endTime){
+        this.endTime = endTime;
     }
     @Override
-    public void setDate(int year, int month, int day){
-        this.day = day;
-    }
-    @Override
-    public void isBooking(boolean isBooking){
+    public void setIsBooking(boolean isBooking){
         this.isBooking = isBooking;
     }
     @Override
     public String toString(){
         String s = "";
         s += String.format("\n%s\n",this.getAttraction());
+        s += String.format("預計行程時間%s ~ %s\n",this.getBeginTime(),this.getEndTime());
         s += String.format("地址：%s\n", this.getAddress());
         s += String.format("電話：%s\n", this.getPhone());
         s += String.format("營業時間：%s\n", this.getBusinessTime());
         s += String.format("門票：%s\n", this.getPrice());
+        s += String.format("來源：%s\n", this.getSource());
         s += "              ";
         System.out.println(s);
         return s;

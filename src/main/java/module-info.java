@@ -8,6 +8,7 @@ module ntou.cs.java2023.travelmaker {
     requires org.apache.poi.poi;
     requires org.apache.poi.ooxml;
     requires org.apache.pdfbox;
+    requires java.desktop;
 
     opens ntou.cs.java2023.travelmaker to javafx.fxml;
     exports ntou.cs.java2023.travelmaker;

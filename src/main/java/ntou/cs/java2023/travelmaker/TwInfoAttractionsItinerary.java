@@ -3,13 +3,7 @@ public class TwInfoAttractionsItinerary extends AttractionsItinerary {//台灣�
     TwInfoAttractionsItinerary(){
         super();
     }
-    TwInfoAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price){
-        super(attractions, address, phone, businessTime, price);
-    }
-    public static String getFrontUrl(){
-        return "https://guide.easytravel.com.tw/search/?&s_key=";
-    }
-    public static String getBackUrl(){
-        return "";
+    TwInfoAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price, String source){
+        super(attractions, address, phone, businessTime, price, source);
     }
 }
