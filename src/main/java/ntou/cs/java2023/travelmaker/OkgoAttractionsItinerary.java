@@ -6,10 +6,4 @@ public class OkgoAttractionsItinerary extends AttractionsItinerary { //完全台
     OkgoAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price){
         super(attractions, address, phone, businessTime, price);
     }
-    public static String getFrontUrl(){
-        return "https://guide.easytravel.com.tw/search/?&s_key=";
-    }
-    public static String getBackUrl(){
-        return "";
-    }
 }
