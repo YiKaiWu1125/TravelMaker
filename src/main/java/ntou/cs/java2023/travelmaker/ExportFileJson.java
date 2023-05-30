@@ -15,7 +15,7 @@ public class ExportFileJson extends ExportFile{
         for (Attractions attractions : attractionsList){
             JSONObject jsonObject = new JSONObject();
 
-            jsonObject.put("attraction",attractions.getAttraction());
+            jsonObject.put("attraction",attractions.getAttractions());
             jsonObject.put("address",attractions.getAddress());
             jsonObject.put("phone",attractions.getPhone());
             jsonObject.put("bsinessTime",attractions.getBusinessTime());

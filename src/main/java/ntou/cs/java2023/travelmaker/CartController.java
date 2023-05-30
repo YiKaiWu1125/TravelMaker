@@ -314,7 +314,6 @@ public class CartController implements Initializable {
     @FXML
     private void clickCartNextButton(ActionEvent event) {
         try {
-            System.out.println(attractionsList);
             Stage currentStage = (Stage) cartNextButton.getScene().getWindow();
             currentStage.close();
 

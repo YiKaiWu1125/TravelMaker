@@ -25,6 +25,14 @@ public class ExportController {
     private Button exportBackButton;
     @FXML
     private Button exportBackToIndexButton;
+    @FXML
+    private Button pdfButton;
+    @FXML
+    private Button wordButton;
+    @FXML
+    private Button excelButton;
+    @FXML
+    private Button jsonButton;
     private TravelItinerary cartTravelItinerary;
 
     public void setCartTravelItinerary(TravelItinerary cartTravelItinerary) {
@@ -38,12 +46,12 @@ public class ExportController {
             currentStage.close();
 
             Stage cartStage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("booking-view.fxml"));
             Parent root = loader.load();
-            CartController cartController = loader.getController();
-            cartController.setCartTravelItinerary(cartTravelItinerary);
+            BookingController bookingController = loader.getController();
+            bookingController.setCartTravelItinerary(cartTravelItinerary);
 
-            cartStage.setTitle("Travel Maker - 購物車");
+            cartStage.setTitle("Travel Maker - 來訂票吧~");
             cartStage.setResizable(false);
             cartStage.setScene(new Scene(root));
             cartStage.show();
@@ -52,7 +60,6 @@ public class ExportController {
             e.printStackTrace();
         }
     }
-
     @FXML
     private void clickExportBackToIndexButton(ActionEvent event) {
         try {
@@ -74,4 +81,29 @@ public class ExportController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void clickPdfButton() {
+        cartTravelItinerary.setExportType(new ExportFilePdf());
+        cartTravelItinerary.runExport();
+    }
+    @FXML
+    private void clickWordButton() {
+        cartTravelItinerary.setExportType(new ExportFileWord());
+        cartTravelItinerary.runExport();
+    }
+    @FXML
+    private void clickExcelButton() {
+        cartTravelItinerary.setExportType(new ExportFileExcel());
+        cartTravelItinerary.runExport();
+    }
+    @FXML
+    private void clickJsonButton() {
+        cartTravelItinerary.setExportType(new ExportFileJson());
+        cartTravelItinerary.runExport();
+    }
+
+
+
+
 }

@@ -16,7 +16,9 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
 
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -78,27 +80,22 @@ public class BookingController implements Initializable {
                         if (empty) {
                             setGraphic(null);
                         } else {
+                            Attractions attractions = getTableView().getItems().get(getIndex());
+                            Hyperlink hyperlink = new Hyperlink();
+                            button.setOnAction(event -> {
+                                String url = "https://www.kkday.com/zh-tw/product/productlist?page=1&keyword=" + attractions.getAttractions();
+                                try {
+                                    Desktop.getDesktop().browse(new URI(url));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            });
                             setGraphic(button);
+                            setAlignment(Pos.CENTER);
                         }
                     }
                 };
             }
-        });
-
-        kkdayColumn.setCellFactory(column -> {
-            return new TableCell<Attractions, Button>() {
-                @Override
-                protected void updateItem(Button button, boolean empty) {
-                    super.updateItem(button, empty);
-
-                    if (empty || button == null) {
-                        setGraphic(null);
-                    } else {
-                        setGraphic(button);
-                        setAlignment(Pos.CENTER); // 设置按钮的对齐方式为居中对齐
-                    }
-                }
-            };
         });
 
         klookColumn.setCellFactory(new Callback<TableColumn<Attractions, Button>, TableCell<Attractions, Button>>() {
@@ -112,27 +109,22 @@ public class BookingController implements Initializable {
                         if (empty) {
                             setGraphic(null);
                         } else {
+                            Attractions attractions = getTableView().getItems().get(getIndex());
+                            Hyperlink hyperlink = new Hyperlink();
+                            button.setOnAction(event -> {
+                                String url = "https://www.klook.com/zh-TW/search/result/?query=" + attractions.getAttractions();
+                                try {
+                                    Desktop.getDesktop().browse(new URI(url));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            });
                             setGraphic(button);
+                            setAlignment(Pos.CENTER);
                         }
                     }
                 };
             }
-        });
-
-        klookColumn.setCellFactory(column -> {
-            return new TableCell<Attractions, Button>() {
-                @Override
-                protected void updateItem(Button button, boolean empty) {
-                    super.updateItem(button, empty);
-
-                    if (empty || button == null) {
-                        setGraphic(null);
-                    } else {
-                        setGraphic(button);
-                        setAlignment(Pos.CENTER); // 设置按钮的对齐方式为居中对齐
-                    }
-                }
-            };
         });
 
         ezTravelColumn.setCellFactory(new Callback<TableColumn<Attractions, Button>, TableCell<Attractions, Button>>() {
@@ -146,27 +138,22 @@ public class BookingController implements Initializable {
                         if (empty) {
                             setGraphic(null);
                         } else {
+                            Attractions attractions = getTableView().getItems().get(getIndex());
+                            Hyperlink hyperlink = new Hyperlink();
+                            button.setOnAction(event -> {
+                                String url = "https://trip.eztravel.com.tw/domestic/keywords?depart=TPE&kw=" + attractions.getAttractions();
+                                try {
+                                    Desktop.getDesktop().browse(new URI(url));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            });
                             setGraphic(button);
+                            setAlignment(Pos.CENTER);
                         }
                     }
                 };
             }
-        });
-
-        ezTravelColumn.setCellFactory(column -> {
-            return new TableCell<Attractions, Button>() {
-                @Override
-                protected void updateItem(Button button, boolean empty) {
-                    super.updateItem(button, empty);
-
-                    if (empty || button == null) {
-                        setGraphic(null);
-                    } else {
-                        setGraphic(button);
-                        setAlignment(Pos.CENTER); // 设置按钮的对齐方式为居中对齐
-                    }
-                }
-            };
         });
 
         isBookingColumn.setCellFactory(new Callback<TableColumn<Attractions, CheckBox>, TableCell<Attractions, CheckBox>>() {
@@ -181,26 +168,11 @@ public class BookingController implements Initializable {
                             setGraphic(null);
                         } else {
                             setGraphic(checkBox);
+                            setAlignment(Pos.CENTER);
                         }
                     }
                 };
             }
-        });
-
-        isBookingColumn.setCellFactory(column -> {
-            return new TableCell<Attractions, CheckBox>() {
-                @Override
-                protected void updateItem(CheckBox checkBox, boolean empty) {
-                    super.updateItem(checkBox, empty);
-
-                    if (empty || checkBox == null) {
-                        setGraphic(null);
-                    } else {
-                        setGraphic(checkBox);
-                        setAlignment(Pos.CENTER); // 设置按钮的对齐方式为居中对齐
-                    }
-                }
-            };
         });
 
         bookingTable.setFixedCellSize(50.0);
@@ -252,7 +224,6 @@ public class BookingController implements Initializable {
                     }
                 }
             }
-            System.out.println(attractionsList);
             Stage currentStage = (Stage) bookingNextButton.getScene().getWindow();
             currentStage.close();
 
