@@ -1,5 +1,9 @@
 package ntou.cs.java2023.travelmaker;
-import javax.swing.*;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+
 public abstract class AttractionsItinerary implements Attractions { //景點行程
     private String attractions;
     private String address;
@@ -10,7 +14,12 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     private boolean isBooking;
     private TimeData beginTime;
     private TimeData endTime;
-    private JCheckBox checkBox = new JCheckBox("");
+    @FXML
+    private CheckBox addOne;
+    @FXML
+    private Button setTime;
+    @FXML
+    private Button deleteItem; 
 
     AttractionsItinerary(){
         this("","","","","", "");
@@ -67,6 +76,14 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     public void setIsBooking(boolean isBooking){
         this.isBooking = isBooking;
     }
+    @Override
+    public CheckBox getAddOne(){return addOne;}
+    @Override
+    public Button getSetTime(){return setTime;}
+    @Override
+    public Button getDeleteItem(){return deleteItem;}
+
+
     @Override
     public String toString(){
         String s = "";
