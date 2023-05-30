@@ -6,41 +6,26 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        //Spide s = new TwInfoSpide();
-        //Spide s = new OkgoSpide();
-        //Spide s = new EasyTravelSpide();
-        //ArrayList<Pair<String, String>> arr = s.crawlerPlace("台中");
-        //System.out.println(arr);
-        //Attractions attractions = s.crawlerPlaceData(arr.get(0).getKey(),arr.get(0).getValue());
-        //
-        //System.out.println(attractions);
-
-
-        ////使用
-        //SearchTopTen STT = new SearchTopTen();
-        //STT.search("台中");
-        //ArrayList<Attractions> attractionsList = STT.getTopTen();
-        ////印出
-        //int i = 1;
-        //for(Attractions attractions : attractionsList){
-        //    System.out.printf("%d : %s  %s %s %s %s%n",i++,attractions.getAttraction(), attractions.getAddress(), attractions.getPhone(), attractions.getPrice(), attractions.getBusinessTime());
-        //}
-        ////可重複使用
-        //STT.search("澎湖");
-        //attractionsList= STT.getTopTen();
-        ////印出
-        //i = 1;
-        //for(Attractions attractions : attractionsList){
-        //    System.out.printf("%d : %s  %s %s %s %s%n",i++,attractions.getAttraction(), attractions.getAddress(), attractions.getPhone(), attractions.getPrice(), attractions.getBusinessTime());
-        //}
+        //建立一個 搜索器(SearchTopTen)
         SearchTopTen STT = new SearchTopTen();
+        //設定 搜尋的地點
         STT.search("台中");
+        //開始搜尋 並回傳結果 型態為 ArrayList<Attractions>
         ArrayList<Attractions> attractionsList = STT.getTopTen();
+
+        //開始建立行程
         TravelItinerary travelItinerary = new TravelItinerary();
+        //將剛剛搜尋到的 景點 透過addAttraction 加入至 旅遊行中
         for(Attractions attractions : attractionsList){
             travelItinerary.addAttraction(attractions);
         }
+        //設定旅遊景點匯出個格式
         travelItinerary.setExportType(new ExportFilePdf());
+        //進行匯出
+        travelItinerary.runExport();
+
+        //可多次進行匯出(或更改輸出格式)
+        travelItinerary.setExportType(new ExportFileWord());
         travelItinerary.runExport();
     }
 }

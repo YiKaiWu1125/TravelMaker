@@ -31,23 +31,17 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2QTvflTYsF7UTpNJrs96vy0vdCV" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2QRVHniSTWHnW8s9fo0nj8vaSUM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.3275862",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
-  }
-}]]></component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/50000/Desktop/TravelMaker&quot;
+}</component>
   <component name="RunManager">
     <configuration name="StartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ntou.cs.java2023.travelmaker.StartApplication" />
@@ -83,12 +77,12 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="e439b2c2-e093-4f9c-970e-15695d6c9821" name="更改" comment="" />
-      <created>1685390494172</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54da5b2a-a02d-46bd-8d5b-a19dd8d00783" name="Changes" comment="" />
+      <created>1685316301881</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685390494172</updated>
+      <updated>1685316301881</updated>
     </task>
     <servers />
   </component>

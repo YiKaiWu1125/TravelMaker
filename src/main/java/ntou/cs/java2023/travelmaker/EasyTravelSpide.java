@@ -112,7 +112,7 @@ public class EasyTravelSpide extends Spide{//四方爬蟲
 
 
             //output
-            attractions = new EasyTravelAttractionsItinerary(place,address,telephone,openTime,ticket);
+            attractions = new EasyTravelAttractionsItinerary(place, address, telephone, openTime, ticket, url);
             //System.out.println("\n"+place);
             //System.out.println("電話：" + telephone);
             //System.out.println("地址：" + address);
