@@ -3,7 +3,6 @@ package ntou.cs.java2023.travelmaker;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.text.Font;
 
 public class ViewPoint {
     private String attraction;
@@ -13,6 +12,10 @@ public class ViewPoint {
     private String price;
     @FXML
     private CheckBox addOne;
+    @FXML
+    private Button setTime;
+    @FXML
+    private Button deleteItem;
 
     public ViewPoint(String attraction, String address, String phone, String businessTime, String price) {
         this.attraction = attraction;
@@ -23,6 +26,16 @@ public class ViewPoint {
 
         addOne = new CheckBox();
         addOne.getStyleClass().add("check-box");
+
+        setTime = new Button();
+        setTime.getStyleClass().add("set-time-button");
+        setTime.setPrefWidth(50.0);
+        setTime.setPrefHeight(50.0);
+
+        deleteItem = new Button();
+        deleteItem.getStyleClass().add("delete-button");
+        deleteItem.setPrefWidth(50.0);
+        deleteItem.setPrefHeight(50.0);
     }
 
     public ViewPoint(String attraction, String address, String phone, String businessTime) {
@@ -34,6 +47,16 @@ public class ViewPoint {
 
         addOne = new CheckBox();
         addOne.getStyleClass().add("check-box");
+
+        setTime = new Button();
+        setTime.getStyleClass().add("set-time-button");
+        setTime.setPrefWidth(50.0);
+        setTime.setPrefHeight(50.0);
+
+        deleteItem = new Button();
+        deleteItem.getStyleClass().add("delete-button");
+        deleteItem.setPrefWidth(50.0);
+        deleteItem.setPrefHeight(50.0);
     }
 
     public String getAttraction() {
@@ -59,12 +82,19 @@ public class ViewPoint {
     public CheckBox getAddOne() {
         return addOne;
     }
+    public Button getSetTime() {
+        return setTime;
+    }
+
+    public Button getDeleteItem() {
+        return deleteItem;
+    }
 
     public void setPrice(){
         this.price = "";
     }
 
-    public void setAddOne(boolean selected){
+    public void setAddOne(boolean selected) {
         addOne.setSelected(selected);
     }
 }

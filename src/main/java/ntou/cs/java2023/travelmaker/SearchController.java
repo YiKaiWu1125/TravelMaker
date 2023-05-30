@@ -27,8 +27,6 @@ public class SearchController implements Initializable{
     @FXML
     private Button cartButton;
     @FXML
-    private Button searchSubmitButton;
-    @FXML
     private TableView<ViewPoint> attractionsTable;
     @FXML
     private TableColumn<ViewPoint, String> attractionColumn;
@@ -211,12 +209,6 @@ public class SearchController implements Initializable{
 
     @FXML
     private void clickSearchSubmitButton(ActionEvent event) {    // Iterate over the items in the table
-        for (ViewPoint item : attractionsTable.getItems()) {
-            // Clear the checkbox by setting the "addOne" property to false
-            item.setAddOne(false);
-        }
-
-
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success！");
         alert.setHeaderText(null);
