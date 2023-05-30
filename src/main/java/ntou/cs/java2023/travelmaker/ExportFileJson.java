@@ -9,28 +9,50 @@ import org.json.simple.JSONObject;
 public class ExportFileJson extends ExportFile{
     @Override
     public void run(ArrayList<Attractions> attractionsList){
+        // 创建 JSON 对象
         JSONArray jsonArray = new JSONArray();
-        int i = 0;
-        for(Attractions attractions : attractionsList){
+
+        for (Attractions attractions : attractionsList){
             JSONObject jsonObject = new JSONObject();
+
             jsonObject.put("attraction",attractions.getAttraction());
             jsonObject.put("address",attractions.getAddress());
             jsonObject.put("phone",attractions.getPhone());
-            jsonObject.put("BbsinessTime",attractions.getBusinessTime());
+            jsonObject.put("bsinessTime",attractions.getBusinessTime());
             jsonObject.put("price",attractions.getPrice());
             jsonObject.put("source",attractions.getSource());
             jsonObject.put("isBooking",attractions.getIsBooking());
-            jsonObject.put("beginTime",attractions.getBeginTime());
-            jsonObject.put("endTime",attractions.getEndTime());
+
+            JSONArray timeJsonArray = new JSONArray();
+            timeJsonArray.add(attractions.getBeginTime().getYear());
+            timeJsonArray.add(attractions.getBeginTime().getMonth());
+            timeJsonArray.add(attractions.getBeginTime().getDay());
+            timeJsonArray.add(attractions.getBeginTime().getHour());
+            timeJsonArray.add(attractions.getBeginTime().getMinute());
+            jsonObject.put("beginTime",timeJsonArray);
+
+            timeJsonArray = new JSONArray();
+            timeJsonArray.add(attractions.getEndTime().getYear());
+            timeJsonArray.add(attractions.getEndTime().getMonth());
+            timeJsonArray.add(attractions.getEndTime().getDay());
+            timeJsonArray.add(attractions.getEndTime().getHour());
+            timeJsonArray.add(attractions.getEndTime().getMinute());
+            jsonObject.put("endTime",timeJsonArray);
+
             jsonArray.add(jsonObject);
         }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("TravelItinerary", jsonArray);
 
         try (FileWriter fileWriter = new FileWriter("output.json")) {
-            // 寫入檔案
-            fileWriter.write(jsonArray.toJSONString());
-            System.out.println("JSON檔案匯出成功！");
+            fileWriter.write(jsonObject.toJSONString());
+            fileWriter.flush();
+            System.out.println("JSON写入成功！");
         } catch (IOException e) {
-            System.out.println("發生IO錯誤：" + e.getMessage());
+            e.printStackTrace();
         }
+
+
+
     }
 }

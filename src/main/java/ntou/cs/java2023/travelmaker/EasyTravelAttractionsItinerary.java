@@ -6,4 +6,7 @@ public class EasyTravelAttractionsItinerary extends AttractionsItinerary { //四
     EasyTravelAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price,String source){
         super(attractions, address, phone, businessTime, price, source);
     }
+    EasyTravelAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price,String source,Boolean isbooking,TimeData beginTime, TimeData endTime){
+        super(attractions, address, phone, businessTime, price, source, isbooking ,beginTime, endTime);
+    }
 }
