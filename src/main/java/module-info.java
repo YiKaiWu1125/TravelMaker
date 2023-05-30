@@ -8,6 +8,8 @@ module ntou.cs.java2023.travelmaker {
     requires org.apache.poi.poi;
     requires org.apache.poi.ooxml;
     requires org.apache.pdfbox;
+    requires gson;
+    requires okhttp3;
     requires java.desktop;
     requires json.simple;
 
