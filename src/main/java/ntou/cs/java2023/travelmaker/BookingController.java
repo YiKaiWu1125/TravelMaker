@@ -35,8 +35,11 @@ public class BookingController {
     private TableColumn<ViewPoint, String> ezTravelColumn;
     @FXML
     private TableColumn<ViewPoint, Button> isbookingColumn;
+    private TravelItinerary cartTravelItinerary;
 
-
+    public void setCartTravelItinerary(TravelItinerary cartTravelItinerary){
+        this.cartTravelItinerary = cartTravelItinerary;
+    }
 
     @FXML
     private void clickBookingBackButton(ActionEvent event) {
@@ -44,12 +47,16 @@ public class BookingController {
             Stage currentStage = (Stage) bookingBackButton.getScene().getWindow();
             currentStage.close();
 
-            Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("cart-view.fxml"));
-            searchStage.setTitle("Travel Maker - 購物車");
-            searchStage.setResizable(false);
-            searchStage.setScene(new Scene(root));
-            searchStage.show();
+            Stage cartStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-view.fxml"));
+            Parent root = loader.load();
+            CartController cartController = loader.getController();
+            cartController.setCartTravelItinerary(cartTravelItinerary);
+
+            cartStage.setTitle("Travel Maker - 購物車");
+            cartStage.setResizable(false);
+            cartStage.setScene(new Scene(root));
+            cartStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -62,12 +69,16 @@ public class BookingController {
             Stage currentStage = (Stage) bookingNextButton.getScene().getWindow();
             currentStage.close();
 
-            Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("export-view.fxml"));
-            searchStage.setTitle("Travel Maker - 選擇檔案匯出格式");
-            searchStage.setResizable(false);
-            searchStage.setScene(new Scene(root));
-            searchStage.show();
+            Stage exportStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("export-view.fxml"));
+            Parent root = loader.load();
+            ExportController exportController = loader.getController();
+            exportController.setCartTravelItinerary(cartTravelItinerary);
+
+            exportStage.setTitle("Travel Maker - 選擇檔案匯出格式");
+            exportStage.setResizable(false);
+            exportStage.setScene(new Scene(root));
+            exportStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();

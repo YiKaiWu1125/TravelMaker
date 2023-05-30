@@ -19,6 +19,7 @@ public class Main {
         for(Attractions attractions : attractionsList){
             travelItinerary.addAttraction(attractions);
         }
+
         //設定旅遊景點匯出個格式
         travelItinerary.setExportType(new ExportFilePdf());
         //進行匯出

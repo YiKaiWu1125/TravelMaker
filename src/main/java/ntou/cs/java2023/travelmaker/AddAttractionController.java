@@ -32,9 +32,11 @@ public class AddAttractionController {
     @FXML
     private TextField priceField;
 
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//    }
+    private TravelItinerary cartTravelItinerary;
+
+    public void setCartTravelItinerary(TravelItinerary cartTravelItinerary) {
+        this.cartTravelItinerary = cartTravelItinerary;
+    }
 
     @FXML
     private void clickCancelButton(ActionEvent event) {
@@ -43,7 +45,11 @@ public class AddAttractionController {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));
@@ -61,7 +67,11 @@ public class AddAttractionController {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));

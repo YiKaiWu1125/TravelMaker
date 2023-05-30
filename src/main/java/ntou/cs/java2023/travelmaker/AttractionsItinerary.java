@@ -3,6 +3,7 @@ package ntou.cs.java2023.travelmaker;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Hyperlink;
 
 public abstract class AttractionsItinerary implements Attractions { //景點行程
     private String attractions;
@@ -10,7 +11,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     private String phone;
     private String businessTime;
     private String price;
-    private String source;
+    private Hyperlink source;
     private boolean isBooking;
     private TimeData beginTime;
     private TimeData endTime;
@@ -32,7 +33,19 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         this.phone = phone; 
         this.businessTime = businessTime; 
         this.price = price;
-        this.source = source;
+        this.source = new Hyperlink(source);
+        addOne = new CheckBox();
+        addOne.getStyleClass().add("check-box");
+
+        setTime = new Button();
+        setTime.getStyleClass().add("set-time-button");
+        setTime.setPrefWidth(50.0);
+        setTime.setPrefHeight(50.0);
+
+        deleteItem = new Button();
+        deleteItem.getStyleClass().add("delete-button");
+        deleteItem.setPrefWidth(50.0);
+        deleteItem.setPrefHeight(50.0);
     }
     @Override
     public String getAttraction() {
@@ -55,7 +68,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         return price;
     }
     @Override
-    public String getSource(){
+    public Hyperlink getSource(){
         return source;
     }
     @Override

@@ -40,6 +40,7 @@ public class CartController implements Initializable {
     private TableColumn<ViewPoint, Button> setTimeColumn;
     @FXML
     private TableColumn<ViewPoint, Button> deleteItemColumn;
+    private TravelItinerary cartTravelItinerary;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -269,6 +270,10 @@ public class CartController implements Initializable {
         travelItineraryTable.setFixedCellSize(150.0);
     }
 
+    public void setCartTravelItinerary(TravelItinerary cartTravelItinerary) {
+        this.cartTravelItinerary = cartTravelItinerary;
+    }
+
     @FXML
     private void clickCartBackButton(ActionEvent event) {
         try {
@@ -276,7 +281,11 @@ public class CartController implements Initializable {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));
@@ -293,12 +302,16 @@ public class CartController implements Initializable {
             Stage currentStage = (Stage) cartNextButton.getScene().getWindow();
             currentStage.close();
 
-            Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("booking-view.fxml"));
-            searchStage.setTitle("Travel Maker - 來訂票吧~"); // "Travel Maker - 選擇檔案匯出格式"
-            searchStage.setResizable(false);
-            searchStage.setScene(new Scene(root));
-            searchStage.show();
+            Stage bookingStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("booking-view.fxml"));
+            Parent root = loader.load();
+            BookingController bookingController = loader.getController();
+            bookingController.setCartTravelItinerary(cartTravelItinerary);
+
+            bookingStage.setTitle("Travel Maker - 來訂票吧~");
+            bookingStage.setResizable(false);
+            bookingStage.setScene(new Scene(root));
+            bookingStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
