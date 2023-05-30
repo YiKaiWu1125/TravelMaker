@@ -14,6 +14,9 @@ public class TimeData {
     TimeData(String year, String month,String day,String hour,String minute){
         setTime(year, month, day, hour, minute);
         isNull = false;
+        if(year.length()<=0 ||month.length()<=0||day.length()<=0||hour.length()<=0||minute.length()<=0){
+            isNull = true;
+        }
     }
     public void setTime(String year, String month,String day,String hour,String minute){
         this.year = year;
