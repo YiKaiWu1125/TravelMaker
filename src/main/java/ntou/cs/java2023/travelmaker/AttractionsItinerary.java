@@ -58,12 +58,15 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
 
         kkdayButton = new Button();
         kkdayButton.getStyleClass().add("normalButton");
+        kkdayButton.setText("KKday");
 
         klookButton = new Button();
         klookButton.getStyleClass().add("normalButton");
+        klookButton.setText("Klook");
 
         ezTravelButton = new Button();
         ezTravelButton.getStyleClass().add("normalButton");
+        ezTravelButton.setText("易遊網");
 
         isBookingCheckBox = new CheckBox();
         isBookingCheckBox.getStyleClass().add("check-box");
@@ -143,6 +146,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         s += String.format("營業時間：%s\n", this.getBusinessTime());
         s += String.format("門票：%s\n", this.getPrice());
         s += String.format("來源：%s\n", this.getSource());
+        s += String.format("是否訂票：%s\n", this.getIsBooking());
         s += "              ";
         System.out.println(s);
         return s;

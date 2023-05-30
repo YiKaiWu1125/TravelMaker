@@ -11,7 +11,7 @@
         </font>
     </Label>
 
-    <Button fx:id="cartBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickCartBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4">
+    <Button fx:id="cartBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickCartBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4" AnchorPane.rightAnchor="897.0">
         <font>
             <Font name="System Bold Italic" size="20.0" />
         </font>
@@ -23,7 +23,7 @@
         </font>
     </Button>
 
-    <Button fx:id="cartShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickCartShowButton" prefHeight="54.0" prefWidth="132.0" styleClass="normalButton" text="顯示購物車" AnchorPane.rightAnchor="851.0" AnchorPane.topAnchor="75.0">
+    <Button fx:id="cartShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickCartShowButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="顯示" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="75.0">
         <font>
             <Font name="System Bold Italic" size="20.0" />
         </font>
