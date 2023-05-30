@@ -269,15 +269,15 @@ public class CartController implements Initializable {
                         setGraphic(null);
                     } else {
                         setGraphic(button);
-                        //button.setOnAction(this::handleDeleteItemClick);
+                        button.setOnAction(this::handleDeleteItemClick);
                     }
                 }
+                @FXML
+                private void handleDeleteItemClick(ActionEvent event) {
+                    Attractions attractions = getTableView().getItems().get(getIndex());
+                    cartTravelItinerary.removeAttractions(attractions);
+                }
 
-//                private void handleDeleteItemClick(ActionEvent event) {
-//                    // 处理删除按钮点击事件的逻辑
-//                    ViewPoint viewPoint = getTableView().getItems().get(getIndex());
-//                    // 在这里执行删除逻辑，例如从列表中移除 viewPoint
-//                }
             };
         });
 

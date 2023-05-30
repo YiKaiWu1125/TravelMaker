@@ -7,8 +7,6 @@
     <list default="true" id="e439b2c2-e093-4f9c-970e-15695d6c9821" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
