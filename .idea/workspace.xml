@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54da5b2a-a02d-46bd-8d5b-a19dd8d00783" name="Changes" comment="">
+    <list default="true" id="e439b2c2-e093-4f9c-970e-15695d6c9821" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML.png" beforeDir="false" afterPath="$PROJECT_DIR$/UML.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/output.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Attractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Attractions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/AttractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/AttractionsItinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/軟體設計_期末專案UML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/軟體設計_期末專案UML.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ViewPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ViewPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ntou/cs/java2023/travelmaker/cart-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/button.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +41,21 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/50000/Desktop/TravelMaker&quot;
-  }
 }</component>
   <component name="RunManager">
+    <configuration name="StartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ntou.cs.java2023.travelmaker.StartApplication" />
+      <module name="GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ntou.cs.java2023.travelmaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="TravelMaker" />
       <method v="2">
@@ -58,6 +69,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.StartApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,5 +85,9 @@
       <updated>1685316301881</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
