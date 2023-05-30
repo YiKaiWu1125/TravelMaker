@@ -71,6 +71,12 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         isBookingCheckBox = new CheckBox();
         isBookingCheckBox.getStyleClass().add("check-box");
     }
+    AttractionsItinerary(String attractions,String address ,String phone ,String businessTime ,String price, String source, Boolean isBooking, TimeData beginTime, TimeData endTime){
+        this(attractions,address,phone,businessTime,price,source);
+        this.isBooking = isBooking;
+        this.beginTime = beginTime;
+        this.endTime = endTime;
+    }
     @Override
     public String getAttractions() {
         return attractions;

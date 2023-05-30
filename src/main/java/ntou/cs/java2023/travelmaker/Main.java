@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        output();
+        input();
+    }
+    static void output(){
         //建立一個 搜索器(SearchTopTen)
         SearchTopTen STT = new SearchTopTen();
         //設定 搜尋的地點
@@ -19,14 +23,18 @@ public class Main {
         for(Attractions attractions : attractionsList){
             travelItinerary.addAttraction(attractions);
         }
-
         //設定旅遊景點匯出個格式
-        travelItinerary.setExportType(new ExportFilePdf());
+        travelItinerary.setExportType(new ExportFileJson());
         //進行匯出
         travelItinerary.runExport();
 
         //可多次進行匯出(或更改輸出格式)
-        travelItinerary.setExportType(new ExportFileWord());
-        travelItinerary.runExport();
+        //travelItinerary.setExportType(new ExportFileWord());
+        //travelItinerary.runExport();
+    }
+    static void input(){
+        ReadFile readFile = new ReadFileJson();
+        TravelItinerary travelItinerary =  readFile.run("output.json");
+        System.out.println(travelItinerary.getAttractionslist());
     }
 }
