@@ -2,6 +2,7 @@ package ntou.cs.java2023.travelmaker;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -33,6 +35,8 @@ public class SearchController implements Initializable{
     private Button addAttractionButton;
     @FXML
     private Button cartButton;
+    @FXML
+    private Button botButton;
     @FXML
     private TableView<Attractions> attractionsTable;
     @FXML
@@ -290,6 +294,24 @@ public class SearchController implements Initializable{
 
         ObservableList<Attractions> data = FXCollections.observableArrayList(attractionsList);
         attractionsTable.setItems(data);
-
     }
+
+    @FXML
+    private void clickBotButton(ActionEvent event) throws IOException {
+        Stage newWindow = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("chatgpt-view.fxml"));
+        Parent root = loader.load();
+
+        // 获取从FXML文件中加载的控制器实例
+        ChatgptController controller = loader.getController();
+
+        // 其他代码
+
+        Scene scene = new Scene(root, 400, 300);
+        newWindow.setScene(scene);
+        newWindow.setTitle("Chat Room");
+        newWindow.show();
+        controller.getInputField().requestFocus();
+    }
+
 }

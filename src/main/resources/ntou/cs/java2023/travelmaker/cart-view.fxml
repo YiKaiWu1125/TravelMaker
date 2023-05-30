@@ -23,7 +23,9 @@
         </font>
     </Button>
 
-    <Button fx:id="cartShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickCartShowButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="顯示" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="75.0">
+    <Button fx:id="botButton" layoutX="41.0" layoutY="80.0" mnemonicParsing="false" onAction="#clickBotButton" prefHeight="68.0" prefWidth="68.0" styleClass="botButton" AnchorPane.bottomAnchor="7.6" AnchorPane.rightAnchor="135.0" />
+
+    <Button fx:id="cartShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickCartShowButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="刷新頁面" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="75.0">
         <font>
             <Font name="System Bold Italic" size="20.0" />
         </font>

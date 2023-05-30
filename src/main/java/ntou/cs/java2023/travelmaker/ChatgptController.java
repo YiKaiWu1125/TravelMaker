@@ -18,7 +18,7 @@ public class ChatgptController {
     private ChatGptApi chatApi;
 
     public void initialize() {
-        String apiKey = "INPUT_KEY";
+        String apiKey = "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";
         String model = "text-davinci-003";
         double temperature = 0.4;
         int maxTokens = 300;
