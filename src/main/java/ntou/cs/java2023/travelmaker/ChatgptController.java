@@ -1,4 +1,4 @@
-package com.example.chatbot;
+package ntou.cs.java2023.travelmaker;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -18,7 +18,7 @@ public class ChatgptController {
     private ChatGptApi chatApi;
 
     public void initialize() {
-        String apiKey = "KEYYYYYYYYYY，github不給傳keyQQ";
+        String apiKey = "INPUT_KEY";
         String model = "text-davinci-003";
         double temperature = 0.4;
         int maxTokens = 300;

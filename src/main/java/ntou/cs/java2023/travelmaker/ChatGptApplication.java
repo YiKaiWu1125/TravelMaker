@@ -1,4 +1,4 @@
-package com.example.chatbot;
+package ntou.cs.java2023.travelmaker;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +16,7 @@ public class ChatGptApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("chatgpt-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(ChatGptApplication.class.getResource("chatgpt-view.fxml"));
         BorderPane root = loader.load();
 
         // 获取从FXML文件中加载的控制器实例
