@@ -294,8 +294,8 @@ public class CartController implements Initializable {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("export-view.fxml"));
-            searchStage.setTitle("Travel Maker - 選擇檔案匯出格式");
+            Parent root = FXMLLoader.load(getClass().getResource("booking-view.fxml"));
+            searchStage.setTitle("Travel Maker - 來訂票吧~"); // "Travel Maker - 選擇檔案匯出格式"
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));
             searchStage.show();
