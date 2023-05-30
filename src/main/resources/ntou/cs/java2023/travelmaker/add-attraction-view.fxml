@@ -27,7 +27,7 @@
          <Font name="System Bold Italic" size="24.0" />
       </font>
    </Label>
-   <TextField fx:id="attractionField" layoutX="415.0" layoutY="120.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="135.0">
+   <TextField fx:id="attractionTextField" layoutX="415.0" layoutY="120.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="135.0">
       <font>
          <Font size="20.0" />
       </font>
@@ -37,7 +37,7 @@
          <Font name="System Bold Italic" size="24.0" />
       </font>
    </Label>
-   <TextField fx:id="addressField" layoutX="172.0" layoutY="194.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="209.0">
+   <TextField fx:id="addressTextField" layoutX="172.0" layoutY="194.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="209.0">
       <font>
          <Font size="20.0" />
       </font>
@@ -47,7 +47,7 @@
          <Font name="System Bold Italic" size="24.0" />
       </font>
    </Label>
-   <TextField fx:id="phoneField" layoutX="172.0" layoutY="268.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="283.0">
+   <TextField fx:id="phoneTextField" layoutX="172.0" layoutY="268.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="283.0">
       <font>
          <Font size="20.0" />
       </font>
@@ -57,7 +57,7 @@
          <Font name="System Bold Italic" size="24.0" />
       </font>
    </Label>
-   <TextField fx:id="businessTimeField" layoutX="172.0" layoutY="342.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="357.0">
+   <TextField fx:id="businessTimeTextField" layoutX="172.0" layoutY="342.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="357.0">
       <font>
          <Font size="20.0" />
       </font>
@@ -66,7 +66,7 @@
       <font>
          <Font name="System Bold Italic" size="24.0" />
       </font></Label>
-   <TextField fx:id="priceField" layoutX="172.0" layoutY="416.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="431.0">
+   <TextField fx:id="priceTextField" layoutX="172.0" layoutY="416.0" prefWidth="320.0" styleClass="addField" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="431.0">
       <font>
          <Font size="20.0" />
       </font>

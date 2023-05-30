@@ -22,15 +22,15 @@ public class AddAttractionController {
     @FXML
     private Button cancelButton;
     @FXML
-    private TextField attractionField;
+    private TextField attractionTextField;
     @FXML
-    private TextField addressField;
+    private TextField addressTextField;
     @FXML
-    private TextField phoneField;
+    private TextField phoneTextField;
     @FXML
-    private TextField businessTimeField;
+    private TextField businessTimeTextField;
     @FXML
-    private TextField priceField;
+    private TextField priceTextField;
 
     private TravelItinerary cartTravelItinerary;
 
@@ -63,6 +63,14 @@ public class AddAttractionController {
     @FXML
     private void clickSaveButton(ActionEvent event) {
         try {
+            String attractionText = attractionTextField.getText();
+            String addressText = addressTextField.getText();
+            String phoneText = phoneTextField.getText();
+            String businessTimeText = businessTimeTextField.getText();
+            String priceText = priceTextField.getText();
+
+            cartTravelItinerary.addAttraction(new MyselfAttractionsItinerary(attractionText,addressText,phoneText,businessTimeText,priceText,"自行新增"));
+
             Stage currentStage = (Stage) saveButton.getScene().getWindow();
             currentStage.close();
 
