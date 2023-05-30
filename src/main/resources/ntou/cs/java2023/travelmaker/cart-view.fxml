@@ -23,7 +23,13 @@
         </font>
     </Button>
 
-    <TableView fx:id="travelItineraryTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" focusTraversable="false">
+    <Button fx:id="cartShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickCartShowButton" prefHeight="54.0" prefWidth="132.0" styleClass="normalButton" text="顯示購物車" AnchorPane.rightAnchor="851.0" AnchorPane.topAnchor="75.0">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+
+    <TableView fx:id="travelItineraryTable" focusTraversable="false" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="140.0">
         <columns>
             <TableColumn fx:id="attractionColumn" prefWidth="125.99999618530273" styleClass="odd-table" text="景點名稱" />
             <TableColumn fx:id="addressColumn" prefWidth="171.40000915527344" styleClass="even-table" text="地址" />
