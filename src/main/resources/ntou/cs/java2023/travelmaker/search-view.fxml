@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/searchPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.SearchController">
+<AnchorPane fx:id="searchAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/searchPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css , @/static/css/checkBox.css, @/static/css/alert.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.SearchController">
 
       <Label contentDisplay="CENTER" text="想去哪裡？" textAlignment="CENTER" AnchorPane.leftAnchor="392.0" AnchorPane.rightAnchor="392.0">
          <font>
@@ -29,6 +29,7 @@
               <TableColumn fx:id="businessTimeColumn" minWidth="0.0" prefWidth="178.4000244140625" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="營業時間" />
               <TableColumn fx:id="priceColumn" prefWidth="221.20001220703125" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="價位" />
               <TableColumn fx:id="addOneColumn" prefWidth="50.0" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="加入" />
+              <TableColumn fx:id="sourceColumn" prefWidth="150.0" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF ; -fx-border-color: #F6DAA5;" text="資料來源" />
           </columns>
       </TableView>
    <Label layoutX="41.0" layoutY="68.0" prefHeight="44.0" prefWidth="179.0" text="TOP10熱門景點">

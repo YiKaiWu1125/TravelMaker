@@ -104,3 +104,35 @@
 .jsonButton:hover {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
 }
+
+.set-time-button {
+    -fx-background-image: url('/static/images/time.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 40px 40px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.set-time-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
+
+.delete-button {
+    -fx-background-image: url('/static/images/delete.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 40px 40px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.delete-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}

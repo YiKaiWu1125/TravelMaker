@@ -3,13 +3,10 @@ public class EasyTravelAttractionsItinerary extends AttractionsItinerary { //四
     EasyTravelAttractionsItinerary(){
         super();
     }
-    EasyTravelAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price){
-        super(attractions, address, phone, businessTime, price);
+    EasyTravelAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price,String source){
+        super(attractions, address, phone, businessTime, price, source);
     }
-    public static String getFrontUrl(){
-        return "https://guide.easytravel.com.tw/search/?&s_key=";
-    }
-    public static String getBackUrl(){
-        return "";
+    EasyTravelAttractionsItinerary(String attractions,String address ,String phone ,String businessTime,String price,String source,Boolean isbooking,TimeData beginTime, TimeData endTime){
+        super(attractions, address, phone, businessTime, price, source, isbooking ,beginTime, endTime);
     }
 }

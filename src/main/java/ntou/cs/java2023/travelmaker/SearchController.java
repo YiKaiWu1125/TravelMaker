@@ -39,7 +39,9 @@ public class SearchController implements Initializable{
     @FXML
     private TableColumn<ViewPoint, String> priceColumn;
     @FXML
-    private TableColumn<ViewPoint, Button> addOneColumn;
+    private TableColumn<ViewPoint, CheckBox> addOneColumn;
+    @FXML
+    private TableColumn<ViewPoint, String> sourceColumn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -138,16 +140,16 @@ public class SearchController implements Initializable{
 
         addOneColumn.setCellFactory(new Callback<>() {
             @Override
-            public TableCell<ViewPoint, Button> call(TableColumn<ViewPoint, Button> param) {
+            public TableCell<ViewPoint, CheckBox> call(TableColumn<ViewPoint, CheckBox> param) {
                 return new TableCell<>() {
                     @Override
-                    protected void updateItem(Button button, boolean empty) {
-                        super.updateItem(button, empty);
+                    protected void updateItem(CheckBox checkBox, boolean empty) {
+                        super.updateItem(checkBox, empty);
 
                         if (empty) {
                             setGraphic(null);
                         } else {
-                            setGraphic(button);
+                            setGraphic(checkBox);
                         }
                     }
                 };
@@ -203,6 +205,19 @@ public class SearchController implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void clickSearchSubmitButton(ActionEvent event) {    // Iterate over the items in the table
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success！");
+        alert.setHeaderText(null);
+        alert.setContentText("已成功新增至購物車！");
+
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(getClass().getResource("/static/css/alert.css").toExternalForm());
+
+        alert.showAndWait();
     }
 
 }

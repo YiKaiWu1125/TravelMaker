@@ -14,16 +14,26 @@ public class TravelItinerary {//旅遊行程
     public ArrayList<Attractions> getAttractionslist(){
         return attractionslist;
     }
-    public void setTime(int index,int year,int month,int day,int hour,int minute){
+    public Attractions getAttractions(int index){return attractionslist.get(index);}
+    public void removeAttractions(int index){
+        attractionslist.remove(index);
+    }
+    public void removeAttractions(Attractions attractions){
+        attractionslist.remove(attractions);
+    }
+    public void setBeginTime(int index, TimeData timeData){
         Attractions attractions = attractionslist.get(index);
-        attractions.setDate(year,month,day);
-        attractions.setHour(hour);
-        attractions.setMinute(minute);
+        attractions.setBeginTime(timeData);
+        attractionslist.set(index,attractions);
+    }
+    public void setEndTime(int index, TimeData timeData){
+        Attractions attractions = attractionslist.get(index);
+        attractions.setEndTime(timeData);
         attractionslist.set(index,attractions);
     }
     public void setBooking(int index,boolean isbooking){
         Attractions attractions = attractionslist.get(index);
-        attractions.isBooking(isbooking);
+        attractions.setIsBooking(isbooking);
         attractionslist.set(index,attractions);
     }
     public void setExportType(ExportFile exportFile){
@@ -32,4 +42,5 @@ public class TravelItinerary {//旅遊行程
     public void runExport(){
         exportFile.run(attractionslist);
     }
+
 }

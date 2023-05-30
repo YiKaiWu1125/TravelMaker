@@ -1,15 +1,21 @@
 package ntou.cs.java2023.travelmaker;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 public interface Attractions {   //景點
    public String getAttraction();
    public String getAddress();
    public String getPhone();
    public String getBusinessTime();
    public String getPrice();
+   public String getSource();
    public String getIsBooking();
-   public static String getFrontUrl(){return null;}
-   public static String getBackUrl(){return null;}
-   public void setHour(int hour);
-   public void setMinute(int Minute);
-   public void setDate(int year, int month, int day);
-   public void isBooking(boolean isBooking);
+   public TimeData getBeginTime();
+   public TimeData getEndTime();
+   public void setBeginTime(TimeData beginTime);
+   public void setEndTime(TimeData endTime);
+   public void setIsBooking(boolean isBooking);
+   public CheckBox getAddOne();
+   public Button getSetTime();
+   public Button getDeleteItem();
 }

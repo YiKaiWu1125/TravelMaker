@@ -10,6 +10,8 @@ module ntou.cs.java2023.travelmaker {
     requires org.apache.pdfbox;
     requires gson;
     requires okhttp3;
+    requires java.desktop;
+    requires json.simple;
 
     opens ntou.cs.java2023.travelmaker to javafx.fxml;
     exports ntou.cs.java2023.travelmaker;
