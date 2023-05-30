@@ -26,6 +26,21 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
 }
 
+.botButton {
+    -fx-background-image: url('/static/images/bot.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px;
+    -fx-border-color: #f2be5c;
+    -fx-border-width: 3;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-position: center;
+}
+
+.botButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 1);
+}
 
 .searchButton {
     -fx-border-color: #c2c3d2;

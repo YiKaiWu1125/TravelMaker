@@ -21,6 +21,7 @@
          </font>
       </Button>
       <Button fx:id="cartButton" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickCartButton" prefHeight="68.0" prefWidth="68.0" styleClass="cartButton" AnchorPane.bottomAnchor="7.6" AnchorPane.rightAnchor="9.4" />
+      <Button fx:id="botButton" layoutX="41.0" layoutY="80.0" mnemonicParsing="false" onAction="#clickBotButton" prefHeight="68.0" prefWidth="68.0" styleClass="botButton" AnchorPane.bottomAnchor="7.6" AnchorPane.rightAnchor="90.0" />
       <TableView fx:id="attractionsTable" focusTraversable="false" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
           <columns>
               <TableColumn fx:id="attractionColumn" prefWidth="139.3999786376953" styleClass="odd-table" text="景點名稱" />

@@ -31,6 +31,8 @@ public class BookingController implements Initializable {
     @FXML
     private Button bookingShowButton;
     @FXML
+    private Button botButton;
+    @FXML
     private TableView<Attractions> bookingTable;
     @FXML
     private TableColumn<Attractions, String> attractionColumn;
@@ -241,5 +243,23 @@ public class BookingController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void clickBotButton(ActionEvent event) throws IOException {
+        Stage newWindow = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("chatgpt-view.fxml"));
+        Parent root = loader.load();
+
+        // 获取从FXML文件中加载的控制器实例
+        ChatgptController controller = loader.getController();
+
+        // 其他代码
+
+        Scene scene = new Scene(root, 400, 300);
+        newWindow.setScene(scene);
+        newWindow.setTitle("Chat Room");
+        newWindow.show();
+        controller.getInputField().requestFocus();
     }
 }
