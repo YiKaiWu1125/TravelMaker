@@ -1,4 +1,7 @@
 package ntou.cs.java2023.travelmaker;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 public interface Attractions {   //景點
    public String getAttraction();
    public String getAddress();
@@ -12,4 +15,7 @@ public interface Attractions {   //景點
    public void setBeginTime(TimeData beginTime);
    public void setEndTime(TimeData endTime);
    public void setIsBooking(boolean isBooking);
+   public CheckBox getAddOne();
+   public Button getSetTime();
+   public Button getDeleteItem();
 }

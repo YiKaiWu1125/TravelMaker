@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54da5b2a-a02d-46bd-8d5b-a19dd8d00783" name="Changes" comment="" />
+    <list default="true" id="54da5b2a-a02d-46bd-8d5b-a19dd8d00783" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML.png" beforeDir="false" afterPath="$PROJECT_DIR$/UML.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/output.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Attractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Attractions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/AttractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/AttractionsItinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/軟體設計_期末專案UML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/軟體設計_期末專案UML.mdj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
