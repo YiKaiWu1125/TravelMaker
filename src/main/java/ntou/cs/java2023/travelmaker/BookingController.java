@@ -24,17 +24,17 @@ public class BookingController {
     @FXML
     private Button bookingNextButton;
     @FXML
-    private TableView<ViewPoint> bookingTable;
+    private TableView<Attractions> bookingTable;
     @FXML
-    private TableColumn<ViewPoint, String> attractionColumn;
+    private TableColumn<Attractions, String> attractionColumn;
     @FXML
-    private TableColumn<ViewPoint, String> kkdayColumn;
+    private TableColumn<Attractions, String> kkdayColumn;
     @FXML
-    private TableColumn<ViewPoint, String> klookColumn;
+    private TableColumn<Attractions, String> klookColumn;
     @FXML
-    private TableColumn<ViewPoint, String> ezTravelColumn;
+    private TableColumn<Attractions, String> ezTravelColumn;
     @FXML
-    private TableColumn<ViewPoint, Button> isbookingColumn;
+    private TableColumn<Attractions, Button> isbookingColumn;
     private TravelItinerary cartTravelItinerary;
 
     public void setCartTravelItinerary(TravelItinerary cartTravelItinerary){

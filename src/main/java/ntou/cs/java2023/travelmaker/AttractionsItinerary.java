@@ -20,7 +20,15 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     @FXML
     private Button setTime;
     @FXML
-    private Button deleteItem; 
+    private Button deleteItem;
+    @FXML
+    private Button kkdayButton;
+    @FXML
+    private Button klookButton;
+    @FXML
+    private Button ezTravelButton;
+    @FXML
+    private CheckBox isBookingCheckBox;
 
     AttractionsItinerary(){
         this("","","","","", "");
@@ -34,6 +42,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         this.businessTime = businessTime; 
         this.price = price;
         this.source = new Hyperlink(source);
+
         addOne = new CheckBox();
         addOne.getStyleClass().add("check-box");
 
@@ -46,6 +55,18 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         deleteItem.getStyleClass().add("delete-button");
         deleteItem.setPrefWidth(50.0);
         deleteItem.setPrefHeight(50.0);
+
+        kkdayButton = new Button();
+        kkdayButton.getStyleClass().add("normalButton");
+
+        klookButton = new Button();
+        klookButton.getStyleClass().add("normalButton");
+
+        ezTravelButton = new Button();
+        ezTravelButton.getStyleClass().add("normalButton");
+
+        isBookingCheckBox = new CheckBox();
+        isBookingCheckBox.getStyleClass().add("check-box");
     }
     @Override
     public String getAttractions() {
@@ -95,7 +116,22 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     public Button getSetTime(){return setTime;}
     @Override
     public Button getDeleteItem(){return deleteItem;}
-
+    @Override
+    public Button getKlookButton() {
+        return klookButton;
+    }
+    @Override
+    public Button getKkdayButton() {
+        return kkdayButton;
+    }
+    @Override
+    public Button getEzTravelButton() {
+        return ezTravelButton;
+    }
+    @Override
+    public CheckBox getIsBookingCheckBox() {
+        return isBookingCheckBox;
+    }
 
     @Override
     public String toString(){

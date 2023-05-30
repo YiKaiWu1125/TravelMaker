@@ -20,4 +20,8 @@ public interface Attractions {   //景點
    public CheckBox getAddOne();
    public Button getSetTime();
    public Button getDeleteItem();
+   public Button getKkdayButton();
+   public Button getKlookButton();
+   public Button getEzTravelButton();
+   public CheckBox getIsBookingCheckBox();
 }
