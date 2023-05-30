@@ -57,7 +57,7 @@ public class SearchController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        attractionColumn.setCellValueFactory(new PropertyValueFactory<>("attraction"));
+        attractionColumn.setCellValueFactory(new PropertyValueFactory<>("attractions"));
         addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
         phoneColumn.setCellValueFactory(new PropertyValueFactory<>("phone"));
         businessTimeColumn.setCellValueFactory(new PropertyValueFactory<>("businessTime"));

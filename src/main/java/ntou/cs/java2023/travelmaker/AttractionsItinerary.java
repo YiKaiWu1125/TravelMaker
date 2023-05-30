@@ -48,7 +48,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         deleteItem.setPrefHeight(50.0);
     }
     @Override
-    public String getAttraction() {
+    public String getAttractions() {
         return attractions;
     }
     @Override
@@ -100,7 +100,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     @Override
     public String toString(){
         String s = "";
-        s += String.format("\n%s\n",this.getAttraction());
+        s += String.format("\n%s\n",this.getAttractions());
         s += String.format("預計行程時間%s ~ %s\n",this.getBeginTime(),this.getEndTime());
         s += String.format("地址：%s\n", this.getAddress());
         s += String.format("電話：%s\n", this.getPhone());

@@ -5,7 +5,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
 
 public interface Attractions {   //景點
-   public String getAttraction();
+   public String getAttractions();
    public String getAddress();
    public String getPhone();
    public String getBusinessTime();

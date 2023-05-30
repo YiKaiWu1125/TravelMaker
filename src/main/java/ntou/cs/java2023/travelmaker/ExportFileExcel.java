@@ -29,7 +29,7 @@ public class ExportFileExcel extends  ExportFile{
 
                 Row addressRow = sheet.createRow(rowIndex);
                 addressRow.createCell(0).setCellValue("位址：");
-                addressRow.createCell(1).setCellValue(attractionsList.get(i).getAttraction());
+                addressRow.createCell(1).setCellValue(attractionsList.get(i).getAttractions());
 
                 Row dataRow1 = sheet.createRow(rowIndex + 1);
                 dataRow1.createCell(0).setCellValue("地址：");
