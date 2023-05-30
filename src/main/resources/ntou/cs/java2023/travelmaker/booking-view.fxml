@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="bookingAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.BookingController">
+<AnchorPane fx:id="bookingAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/table.css, @/static/css/checkBox.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.BookingController">
     <Label contentDisplay="CENTER" prefHeight="62.0" prefWidth="217.0" text="Booking!" textAlignment="CENTER" AnchorPane.leftAnchor="403.0" AnchorPane.rightAnchor="403.0" AnchorPane.topAnchor="25.0">
         <font>
             <Font name="System Bold Italic" size="48.0" />
         </font>
     </Label>
 
-    <Button fx:id="bookingBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickBookingBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4">
+    <Button fx:id="bookingBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickBookingBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4" AnchorPane.rightAnchor="897.0">
         <font>
             <Font name="System Bold Italic" size="20.0" />
         </font>
@@ -23,15 +23,19 @@
         </font>
     </Button>
 
-    <TableView fx:id="bookingTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+    <Button fx:id="bookingShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickBookingShowButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="顯示" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="75.0">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+
+    <TableView fx:id="bookingTable" focusTraversable="false" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="140.0">
         <columns>
-            <TableColumn fx:id="attractionColumn" prefWidth="200.0" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="景點名稱" />
-            <TableColumn fx:id="kkdayColumn" prefWidth="206.0" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="KKday" />
-            <TableColumn fx:id="klookColumn" prefWidth="206.0" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="Klook" />
-            <TableColumn fx:id="ezTravelColumn" minWidth="0.0" prefWidth="206.0" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="易遊網" />
-            <TableColumn fx:id="isBookingColumn" prefWidth="115.800048828125" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="安排好了嗎?" />
+            <TableColumn fx:id="attractionColumn" prefWidth="200.0" styleClass="odd-table" text="景點名稱" />
+            <TableColumn fx:id="kkdayColumn" prefWidth="206.0" styleClass="even-table" text="KKday" />
+            <TableColumn fx:id="klookColumn" prefWidth="206.0" styleClass="odd-table" text="Klook" />
+            <TableColumn fx:id="ezTravelColumn" minWidth="0.0" prefWidth="206.0" styleClass="even-table" text="易遊網" />
+            <TableColumn fx:id="isBookingColumn" prefWidth="115.800048828125" styleClass="odd-table" text="安排好了嗎?" />
         </columns>
     </TableView>
-
-
 </AnchorPane>

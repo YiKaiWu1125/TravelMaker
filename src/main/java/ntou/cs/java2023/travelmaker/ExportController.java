@@ -25,6 +25,11 @@ public class ExportController {
     private Button exportBackButton;
     @FXML
     private Button exportBackToIndexButton;
+    private TravelItinerary cartTravelItinerary;
+
+    public void setCartTravelItinerary(TravelItinerary cartTravelItinerary) {
+        this.cartTravelItinerary = cartTravelItinerary;
+    }
 
     @FXML
     private void clickExportBackButton(ActionEvent event) {
@@ -32,12 +37,16 @@ public class ExportController {
             Stage currentStage = (Stage) exportBackButton.getScene().getWindow();
             currentStage.close();
 
-            Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("cart-view.fxml"));
-            searchStage.setTitle("Travel Maker - 購物車");
-            searchStage.setResizable(false);
-            searchStage.setScene(new Scene(root));
-            searchStage.show();
+            Stage cartStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-view.fxml"));
+            Parent root = loader.load();
+            CartController cartController = loader.getController();
+            cartController.setCartTravelItinerary(cartTravelItinerary);
+
+            cartStage.setTitle("Travel Maker - 購物車");
+            cartStage.setResizable(false);
+            cartStage.setScene(new Scene(root));
+            cartStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,7 +60,11 @@ public class ExportController {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));

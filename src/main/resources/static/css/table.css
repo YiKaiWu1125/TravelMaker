@@ -1,0 +1,17 @@
+.odd-table {
+    -fx-font-size: 16px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #F6DAA5;
+}
+
+.even-table {
+    -fx-font-size: 16px;
+    -fx-background-color: #F6DAA5;
+    -fx-border-color: #FFFFFF;
+}
+
+
+.table-cell:hover {
+    -fx-background-color: #f1c165;
+    -fx-text-fill: white;
+}

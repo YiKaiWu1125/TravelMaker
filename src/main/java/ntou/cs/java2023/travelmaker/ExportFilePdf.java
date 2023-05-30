@@ -46,7 +46,7 @@ public class ExportFilePdf extends ExportFile{
 
                 contentStream.showText( (++i) +" :");
                 contentStream.newLine();
-                contentStream.showText("景點名稱 :" + attractions.getAttraction());
+                contentStream.showText("景點名稱 :" + attractions.getAttractions());
                 contentStream.newLine();
                 contentStream.showText("地址：" + attractions.getAddress());
                 contentStream.newLine();

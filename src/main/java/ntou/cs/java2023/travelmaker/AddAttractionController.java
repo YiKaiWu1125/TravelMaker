@@ -22,19 +22,21 @@ public class AddAttractionController {
     @FXML
     private Button cancelButton;
     @FXML
-    private TextField attractionField;
+    private TextField attractionTextField;
     @FXML
-    private TextField addressField;
+    private TextField addressTextField;
     @FXML
-    private TextField phoneField;
+    private TextField phoneTextField;
     @FXML
-    private TextField businessTimeField;
+    private TextField businessTimeTextField;
     @FXML
-    private TextField priceField;
+    private TextField priceTextField;
 
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//    }
+    private TravelItinerary cartTravelItinerary;
+
+    public void setCartTravelItinerary(TravelItinerary cartTravelItinerary) {
+        this.cartTravelItinerary = cartTravelItinerary;
+    }
 
     @FXML
     private void clickCancelButton(ActionEvent event) {
@@ -43,7 +45,11 @@ public class AddAttractionController {
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));
@@ -57,11 +63,23 @@ public class AddAttractionController {
     @FXML
     private void clickSaveButton(ActionEvent event) {
         try {
+            String attractionText = attractionTextField.getText();
+            String addressText = addressTextField.getText();
+            String phoneText = phoneTextField.getText();
+            String businessTimeText = businessTimeTextField.getText();
+            String priceText = priceTextField.getText();
+
+            cartTravelItinerary.addAttraction(new MyselfAttractionsItinerary(attractionText,addressText,phoneText,businessTimeText,priceText,"自行新增"));
+
             Stage currentStage = (Stage) saveButton.getScene().getWindow();
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));

@@ -19,15 +19,22 @@ public class StartController {
 
     @FXML
     private Button startButton;
+    private TravelItinerary cartTravelItinerary;
 
     @FXML
     private void clickStartButton(ActionEvent event) {
         try {
+            cartTravelItinerary = new TravelItinerary();
+
             Stage currentStage = (Stage) startButton.getScene().getWindow();
             currentStage.close();
 
             Stage searchStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("search-view.fxml"));
+            Parent root = loader.load();
+            SearchController searchController = loader.getController();
+            searchController.setCartTravelItinerary(cartTravelItinerary);
+
             searchStage.setTitle("Travel Maker - Go Where?");
             searchStage.setResizable(false);
             searchStage.setScene(new Scene(root));

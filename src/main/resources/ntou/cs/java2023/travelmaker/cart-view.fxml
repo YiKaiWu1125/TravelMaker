@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="cartAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.CartController">
+<AnchorPane fx:id="cartAnchorPane" maxHeight="720" maxWidth="1280" minHeight="576" minWidth="1024" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/static/images/addPage.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" stylesheets="@/static/css/button.css, @/static/css/textField.css, @/static/css/table.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntou.cs.java2023.travelmaker.CartController">
     <Label contentDisplay="CENTER" prefHeight="62.0" prefWidth="144.0" text="購物車" textAlignment="CENTER" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="440.0" AnchorPane.topAnchor="25.0">
         <font>
             <Font name="System Bold Italic" size="48.0" />
         </font>
     </Label>
 
-    <Button fx:id="cartBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickCartBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4">
+    <Button fx:id="cartBackButton" layoutX="897.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickCartBackButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="返回" AnchorPane.leftAnchor="9.4" AnchorPane.rightAnchor="897.0">
         <font>
             <Font name="System Bold Italic" size="20.0" />
         </font>
@@ -23,17 +23,21 @@
         </font>
     </Button>
 
-    <TableView fx:id="travelItineraryTable" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+    <Button fx:id="cartShowButton" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickCartShowButton" prefHeight="54.0" prefWidth="117.0" styleClass="normalButton" text="顯示" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="75.0">
+        <font>
+            <Font name="System Bold Italic" size="20.0" />
+        </font>
+    </Button>
+
+    <TableView fx:id="travelItineraryTable" focusTraversable="false" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="140.0">
         <columns>
-            <TableColumn fx:id="attractionColumn" prefWidth="125.99999618530273" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="景點名稱" />
-            <TableColumn fx:id="addressColumn" prefWidth="171.40000915527344" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="地址" />
-            <TableColumn fx:id="phoneColumn" prefWidth="149.4000244140625" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="電話" />
-            <TableColumn fx:id="businessTimeColumn" minWidth="0.0" prefWidth="168.800048828125" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="營業時間" />
-            <TableColumn fx:id="priceColumn" prefWidth="177.5999755859375" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #F6DAA5;" text="價位" />
-            <TableColumn fx:id="setTimeColumn" prefWidth="78.79998779296875" style="-fx-font-size: 16px; -fx-background-color: #F6DAA5; -fx-border-color: #FFFFFF;" text="設定時間" />
-            <TableColumn fx:id="deleteItemColumn" prefWidth="60.0" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF ; -fx-border-color: #F6DAA5;" text="刪除" />
+            <TableColumn fx:id="attractionColumn" prefWidth="125.99999618530273" styleClass="odd-table" text="景點名稱" />
+            <TableColumn fx:id="addressColumn" prefWidth="171.40000915527344" styleClass="even-table" text="地址" />
+            <TableColumn fx:id="phoneColumn" prefWidth="149.4000244140625" styleClass="odd-table" text="電話" />
+            <TableColumn fx:id="businessTimeColumn" minWidth="0.0" prefWidth="168.800048828125" styleClass="even-table" text="營業時間" />
+            <TableColumn fx:id="priceColumn" prefWidth="177.5999755859375" styleClass="odd-table" text="價位" />
+            <TableColumn fx:id="setTimeColumn" prefWidth="78.79998779296875" styleClass="even-table" text="設定時間" />
+            <TableColumn fx:id="deleteItemColumn" prefWidth="60.0" styleClass="odd-table" text="刪除" />
         </columns>
     </TableView>
-
-
 </AnchorPane>
