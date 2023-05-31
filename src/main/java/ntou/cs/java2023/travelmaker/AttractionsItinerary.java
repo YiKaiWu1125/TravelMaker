@@ -153,7 +153,7 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         s += String.format("來源：%s\n", this.getSource());
         s += String.format("是否訂票：%s\n", this.getIsBooking());
         s += "              ";
-        System.out.println(s);
+        //System.out.println(s);
         return s;
     }
 }
