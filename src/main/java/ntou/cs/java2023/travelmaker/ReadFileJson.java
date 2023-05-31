@@ -15,6 +15,7 @@ public class ReadFileJson extends ReadFile{
         JSONParser jsonParser = new JSONParser();
 
         try (FileReader fileReader = new FileReader(url)) {
+            System.out.println(url);
             Object obj = jsonParser.parse(fileReader);
             JSONObject jsonObject = (JSONObject) obj;
 
@@ -22,13 +23,14 @@ public class ReadFileJson extends ReadFile{
             for (Object studentObj : jsonArray) {
                 JSONObject student = (JSONObject) studentObj;
     
-                String attraction = (String)student.get("attraction");
+                String attractions = (String)student.get("attractions");
                 String address = (String)student.get("address");
                 String phone = (String)student.get("phone");
-                String bsinessTime = (String)student.get("bsinessTime");
+                String businessTime = (String)student.get("businessTime");
                 String price = (String)student.get("price");
                 String source = (String)student.get("source");
                 String isBookingStr = (String)student.get("isBooking");
+                System.out.println(isBookingStr);
                 boolean isBooking = isBookingStr.contains("尚未訂購")?false:true;
 
                 JSONArray timeArray = (JSONArray) student.get("beginTime");
@@ -49,16 +51,16 @@ public class ReadFileJson extends ReadFile{
                 //System.out.println("endTime"+endTime);
 
                 if(source.contains("easytravel")){
-                    travelItinerary.addAttraction(new EasyTravelAttractionsItinerary(attraction,address,phone,bsinessTime,price,source,isBooking,beginTime,endTime));
+                    travelItinerary.addAttraction(new EasyTravelAttractionsItinerary(attractions,address,phone,businessTime,price,source,isBooking,beginTime,endTime));
                 }
                 else if(source.contains("okgo")){
-                    travelItinerary.addAttraction(new OkgoAttractionsItinerary(attraction,address,phone,bsinessTime,price,source,isBooking,beginTime,endTime));
+                    travelItinerary.addAttraction(new OkgoAttractionsItinerary(attractions,address,phone,businessTime,price,source,isBooking,beginTime,endTime));
                 }
                 else if(source.contains("zip5")){
-                    travelItinerary.addAttraction(new TwInfoAttractionsItinerary(attraction,address,phone,bsinessTime,price,source,isBooking,beginTime,endTime));
+                    travelItinerary.addAttraction(new TwInfoAttractionsItinerary(attractions,address,phone,businessTime,price,source,isBooking,beginTime,endTime));
                 }
                 else if(source.contains("自行新增")){
-                    travelItinerary.addAttraction(new MyselfAttractionsItinerary(attraction,address,phone,bsinessTime,price,source,isBooking,beginTime,endTime));
+                    travelItinerary.addAttraction(new MyselfAttractionsItinerary(attractions,address,phone,businessTime,price,source,isBooking,beginTime,endTime));
                 }
                 else{
                     System.out.println("匯入時找不到景點型態");
