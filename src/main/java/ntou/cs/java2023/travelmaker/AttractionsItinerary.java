@@ -42,33 +42,33 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
         this.price = price;
         this.source = source;
 
-        //addOne = new CheckBox();
-        //addOne.getStyleClass().add("check-box");
-        //
-        //setTime = new Button();
-        //setTime.getStyleClass().add("set-time-button");
-        //setTime.setPrefWidth(50.0);
-        //setTime.setPrefHeight(50.0);
-        //
-        //deleteItem = new Button();
-        //deleteItem.getStyleClass().add("delete-button");
-        //deleteItem.setPrefWidth(50.0);
-        //deleteItem.setPrefHeight(50.0);
-        //
-        //kkdayButton = new Button();
-        //kkdayButton.getStyleClass().add("normalButton");
-        //kkdayButton.setText("KKday");
-        //
-        //klookButton = new Button();
-        //klookButton.getStyleClass().add("normalButton");
-        //klookButton.setText("Klook");
-        //
-        //ezTravelButton = new Button();
-        //ezTravelButton.getStyleClass().add("normalButton");
-        //ezTravelButton.setText("易遊網");
-        //
-        //isBookingCheckBox = new CheckBox();
-        //isBookingCheckBox.getStyleClass().add("check-box");
+        addOne = new CheckBox();
+        addOne.getStyleClass().add("check-box");
+
+        setTime = new Button();
+        setTime.getStyleClass().add("set-time-button");
+        setTime.setPrefWidth(50.0);
+        setTime.setPrefHeight(50.0);
+
+        deleteItem = new Button();
+        deleteItem.getStyleClass().add("delete-button");
+        deleteItem.setPrefWidth(50.0);
+        deleteItem.setPrefHeight(50.0);
+
+        kkdayButton = new Button();
+        kkdayButton.getStyleClass().add("normalButton");
+        kkdayButton.setText("KKday");
+
+        klookButton = new Button();
+        klookButton.getStyleClass().add("normalButton");
+        klookButton.setText("Klook");
+
+        ezTravelButton = new Button();
+        ezTravelButton.getStyleClass().add("normalButton");
+        ezTravelButton.setText("易遊網");
+
+        isBookingCheckBox = new CheckBox();
+        isBookingCheckBox.getStyleClass().add("check-box");
     }
     AttractionsItinerary(String attractions,String address ,String phone ,String businessTime ,String price, String source, Boolean isBooking, TimeData beginTime, TimeData endTime){
         this(attractions,address,phone,businessTime,price,source);

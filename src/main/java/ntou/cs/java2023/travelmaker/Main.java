@@ -8,13 +8,13 @@ public class Main {
     public static void main(String[] args) {
         //output();
         //input();
-        Spide spide = new EasyTravelSpide("台中");
-        ArrayList<Attractions> attractionsArrayList = spide.getResult();
-        for(Attractions attractions : attractionsArrayList){
-            System.out.println(attractions);
-        }
-        //System.out.println(attractionsArrayList.get(0));
-        System.out.println("over---");
+        //Spide spide = new TwInfoSpide("台中");
+        //ArrayList<Attractions> attractionsArrayList = spide.getResult();
+        //for(Attractions attractions : attractionsArrayList){
+        //    System.out.println(attractions);
+        //}
+        ////System.out.println(attractionsArrayList.get(0));
+        //System.out.println("over---");
     }
     static void output(){
         //建立一個 搜索器(SearchTopTen)
