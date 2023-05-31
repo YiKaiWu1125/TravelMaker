@@ -48,6 +48,8 @@ public class ExportFilePdf extends ExportFile{
                 contentStream.newLine();
                 contentStream.showText("景點名稱 :" + attractions.getAttractions());
                 contentStream.newLine();
+                contentStream.showText(String.format("預計行程時間 : %s ~ %s" , attractions.getBeginTime(),attractions.getEndTime()));
+                contentStream.newLine();
                 contentStream.showText("地址：" + attractions.getAddress());
                 contentStream.newLine();
                 contentStream.showText("電話：" + attractions.getPhone());

@@ -10,13 +10,19 @@ public class SearchTopTen {
     }
     public void search(String where){
         spidesList.clear();
+        spidesList.add(new TwInfoSpide(where));
         spidesList.add(new EasyTravelSpide(where));
         spidesList.add(new OkgoSpide(where));
-        spidesList.add(new TwInfoSpide(where));
 
         attractionsList.clear();
         for (Spide spide : spidesList){
             attractionsList.addAll(spide.getResult());
+        }
+        Attractions attractions = null;
+        for (int i = 1; i*2+1 < attractionsList.size();i+=2){
+            attractions = attractionsList.get(attractionsList.size()-i);
+            attractionsList.set(attractionsList.size()-i,attractionsList.get(i));
+            attractionsList.set(i,attractions);
         }
     }
     public ArrayList<Attractions> getTopTen(){

@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="05686bcd-7e2b-4b86-b7df-91ae551b7cf8" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/AttractionsItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/AttractionsItinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/TwInfoSpide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/TwInfoSpide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/output.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ExportFilePdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/ExportFilePdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchTopTen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ntou/cs/java2023/travelmaker/SearchTopTen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
