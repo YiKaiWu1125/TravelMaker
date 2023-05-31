@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -45,6 +46,10 @@ public class CartController implements Initializable {
     private TableColumn<Attractions, Button> setTimeColumn;
     @FXML
     private TableColumn<Attractions, Button> deleteItemColumn;
+    @FXML
+    private TableColumn<Attractions, TimeData> startTimeColumn;
+    @FXML
+    private TableColumn<Attractions, TimeData> endTimeColumn;
     private TravelItinerary cartTravelItinerary;
     private ArrayList<Attractions> attractionsList;
 
@@ -62,6 +67,8 @@ public class CartController implements Initializable {
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         setTimeColumn.setCellValueFactory(new PropertyValueFactory<>("setTime"));
         deleteItemColumn.setCellValueFactory(new PropertyValueFactory<>("deleteItem"));
+        startTimeColumn.setCellValueFactory(new PropertyValueFactory<>("beginTime"));
+        endTimeColumn.setCellValueFactory(new PropertyValueFactory<>("endTime"));
 
         attractionColumn.setCellFactory(column -> {
             return new TableCell<Attractions, String>() {
@@ -158,6 +165,7 @@ public class CartController implements Initializable {
                         setGraphic(null);
                     } else {
                         setGraphic(button);
+                        setAlignment(Pos.TOP_CENTER);
                         button.setOnAction(this::handleSetTimeButtonClick);  // 将按钮点击事件分配给方法
                     }
                 }
@@ -269,6 +277,7 @@ public class CartController implements Initializable {
                         setGraphic(null);
                     } else {
                         setGraphic(button);
+                        setAlignment(Pos.TOP_CENTER);
                         button.setOnAction(this::handleDeleteItemClick);
                     }
                 }
@@ -278,6 +287,40 @@ public class CartController implements Initializable {
                     cartTravelItinerary.removeAttractions(attractions);
                 }
 
+            };
+        });
+
+        startTimeColumn.setCellFactory(column -> {
+            return new TableCell<Attractions, TimeData>() {
+                @Override
+                protected void updateItem(TimeData item, boolean empty) {
+                    super.updateItem(item, empty);
+
+                    if (item == null || empty) {
+                        setText(null);
+                        setGraphic(null);
+                    } else {
+                        setText(item.toString());
+                        setWrapText(true);
+                    }
+                }
+            };
+        });
+
+        endTimeColumn.setCellFactory(column -> {
+            return new TableCell<Attractions, TimeData>() {
+                @Override
+                protected void updateItem(TimeData item, boolean empty) {
+                    super.updateItem(item, empty);
+
+                    if (item == null || empty) {
+                        setText(null);
+                        setGraphic(null);
+                    } else {
+                        setText(item.toString());
+                        setWrapText(true);
+                    }
+                }
             };
         });
 
