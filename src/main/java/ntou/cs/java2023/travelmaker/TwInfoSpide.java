@@ -29,7 +29,7 @@ public class TwInfoSpide extends Spide{//爬蟲
         String telephone = "";
         String address = "";
         String openTime = "";
-        String ticket = "";
+        String ticket = "現場公告為主";
         Attractions attractions = null;
         //輔助
         try {

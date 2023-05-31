@@ -54,9 +54,11 @@ public class OkgoSpide extends Spide{//爬蟲
             url="https://okgo.tw/"+keyword;
             Document doc = Jsoup.connect(url).get();
 
+            //System.out.println(doc);
+
             //phone address
             Elements divs = doc.select("div.sec3.word.Resize");
-            //System.out.println(divs);
+
 
             // 正则表达式匹配电话号码
             String phoneRegex = "\\d{2}-\\d{8}";
@@ -80,6 +82,18 @@ public class OkgoSpide extends Spide{//爬蟲
             }else{
                 address="無";
             }
+
+            try{
+                Elements targetElements = doc.getElementsByAttribute("id").select("[id=" + "Buty_View_Traffic" + "]");
+                String targetText = targetElements.get(1).text();
+                openTime = targetText.length()>50?"尚無資訊":targetText;
+            }catch (Exception e){
+                openTime="尚無資訊";
+            }
+
+            ticket = "依現場報價為主";
+
+
             //output
             attractions = new OkgoAttractionsItinerary(place,address,telephone,openTime,ticket, url);
             //System.out.println("\n"+place);
