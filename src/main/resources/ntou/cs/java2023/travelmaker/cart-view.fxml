@@ -34,12 +34,14 @@
     <TableView fx:id="travelItineraryTable" focusTraversable="false" layoutX="41.0" layoutY="118.0" prefHeight="339.0" prefWidth="862.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="140.0">
         <columns>
             <TableColumn fx:id="attractionColumn" prefWidth="125.99999618530273" styleClass="odd-table" text="景點名稱" />
-            <TableColumn fx:id="addressColumn" prefWidth="171.40000915527344" styleClass="even-table" text="地址" />
-            <TableColumn fx:id="phoneColumn" prefWidth="149.4000244140625" styleClass="odd-table" text="電話" />
-            <TableColumn fx:id="businessTimeColumn" minWidth="0.0" prefWidth="168.800048828125" styleClass="even-table" text="營業時間" />
-            <TableColumn fx:id="priceColumn" prefWidth="177.5999755859375" styleClass="odd-table" text="價位" />
-            <TableColumn fx:id="setTimeColumn" prefWidth="78.79998779296875" styleClass="even-table" text="設定時間" />
+            <TableColumn fx:id="addressColumn" prefWidth="137.99996948242188" styleClass="even-table" text="地址" />
+            <TableColumn fx:id="phoneColumn" prefWidth="138.0" styleClass="odd-table" text="電話" />
+            <TableColumn fx:id="businessTimeColumn" minWidth="0.0" prefWidth="159.0" styleClass="even-table" text="營業時間" />
+            <TableColumn fx:id="priceColumn" prefWidth="164.199951171875" styleClass="odd-table" text="價位" />
+            <TableColumn fx:id="setTimeColumn" prefWidth="78.39996337890625" styleClass="even-table" text="設定時間" />
             <TableColumn fx:id="deleteItemColumn" prefWidth="60.0" styleClass="odd-table" text="刪除" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="75.0" styleClass="even-table" text="出發" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="75.0" styleClass="odd-table" text="離開" />
         </columns>
     </TableView>
 </AnchorPane>
