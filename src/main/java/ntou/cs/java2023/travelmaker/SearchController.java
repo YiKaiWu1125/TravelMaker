@@ -174,6 +174,13 @@ public class SearchController implements Initializable{
 
         sourceColumn.setCellFactory(column -> {
             return new TableCell<Attractions, String>() {
+                private Hyperlink hyperlink;
+
+                {
+                    setWrapText(true);
+                    setGraphic(null);
+                }
+
                 @Override
                 protected void updateItem(String item, boolean empty) {
                     super.updateItem(item, empty);
@@ -182,10 +189,20 @@ public class SearchController implements Initializable{
                         setText(null);
                         setGraphic(null);
                     } else {
-                        setText(item);
-                        setWrapText(true);
+                        if (hyperlink == null) {
+                            hyperlink = new Hyperlink();
+                            hyperlink.setOnAction(event -> {
+                                String url = hyperlink.getText();
+                                openURL(url);
+                            });
+                        }
+
+                        hyperlink.setText(item);
+                        setGraphic(hyperlink);
+                        setText(null);
                     }
                 }
+
                 // Open the URL using the system's default browser
                 private void openURL(String url) {
                     try {
