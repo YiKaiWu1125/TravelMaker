@@ -8,11 +8,12 @@ public class Main {
     public static void main(String[] args) {
         //output();
         //input();
-        Spide spide = new OkgoSpide("台中");
+        Spide spide = new EasyTravelSpide("台中");
         ArrayList<Attractions> attractionsArrayList = spide.getResult();
         for(Attractions attractions : attractionsArrayList){
             System.out.println(attractions);
         }
+        //System.out.println(attractionsArrayList.get(0));
         System.out.println("over---");
     }
     static void output(){
