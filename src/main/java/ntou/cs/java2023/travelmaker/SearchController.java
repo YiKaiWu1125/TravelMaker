@@ -52,7 +52,7 @@ public class SearchController implements Initializable{
     @FXML
     private TableColumn<Attractions, CheckBox> addOneColumn;
     @FXML
-    private TableColumn<Attractions, Hyperlink> sourceColumn;
+    private TableColumn<Attractions, String> sourceColumn;
     private ArrayList<Attractions> attractionsList = null;
     private TravelItinerary cartTravelItinerary;
 
@@ -173,21 +173,16 @@ public class SearchController implements Initializable{
         });
 
         sourceColumn.setCellFactory(column -> {
-            return new TableCell<Attractions, Hyperlink>() {
+            return new TableCell<Attractions, String>() {
                 @Override
-                protected void updateItem(Hyperlink item, boolean empty) {
+                protected void updateItem(String item, boolean empty) {
                     super.updateItem(item, empty);
 
                     if (item == null || empty) {
                         setText(null);
                         setGraphic(null);
                     } else {
-                        item.setOnAction(event -> {
-                            String url = item.getText();
-                            openURL(url);
-                        });
-                        setGraphic(item);
-                        setText(item.getText());
+                        setText(item);
                         setWrapText(true);
                     }
                 }
