@@ -12,6 +12,7 @@ public class TravelItinerary {//旅遊行程
         attractionslist.add(attractions);
     }
     public ArrayList<Attractions> getAttractionslist(){
+        this.sortAttractions();
         return attractionslist;
     }
     public Attractions getAttractions(int index){return attractionslist.get(index);}
@@ -35,6 +36,18 @@ public class TravelItinerary {//旅遊行程
         Attractions attractions = attractionslist.get(index);
         attractions.setIsBooking(isbooking);
         attractionslist.set(index,attractions);
+    }
+    public void sortAttractions(){
+        Attractions attractions;
+        for(int i = 0; i < attractionslist.size();i++){
+            for(int j = i+1 ; j <attractionslist.size(); j++){
+                if(attractionslist.get(i).compareTime(attractionslist.get(j))){
+                   attractions = attractionslist.get(i);
+                   attractionslist.set(i,attractionslist.get(j));
+                   attractionslist.set(j,attractions);
+                }
+            }
+        }
     }
     public void setExportType(ExportFile exportFile){
         this.exportFile = exportFile;
