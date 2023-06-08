@@ -17,6 +17,7 @@ public interface Attractions {   //景點
    public void setEndTime(TimeData endTime);
    public void setIsBooking(boolean isBooking);
    public CheckBox getAddOne();
+   public Boolean compareTime(Attractions attractions);
    public Button getSetTime();
    public Button getDeleteItem();
    public Button getKkdayButton();

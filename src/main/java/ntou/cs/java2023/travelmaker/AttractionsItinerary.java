@@ -121,6 +121,15 @@ public abstract class AttractionsItinerary implements Attractions { //景點行�
     @Override
     public CheckBox getAddOne(){return addOne;}
     @Override
+    public Boolean compareTime(Attractions attractions){
+        if(this.getBeginTime().getIsNull()){return false;}
+        else if(this.getEndTime().getIsNull()){return false;}
+        else if(attractions.getBeginTime().getIsNull()){return true;}
+        else if(attractions.getEndTime().getIsNull()){return true;}
+        else if(this.getBeginTime().compareTime(attractions.getBeginTime())){return true;}
+        else {return false;}
+    }
+    @Override
     public Button getSetTime(){return setTime;}
     @Override
     public Button getDeleteItem(){return deleteItem;}

@@ -251,18 +251,20 @@ public class CartController implements Initializable {
                     Optional<ButtonType> result = dialog.showAndWait();
                     if (result.isPresent() && result.get() == ButtonType.OK) {
                         LocalDate startDate = startDatePicker.getValue();
-                        int startHour = startHourComboBox.getValue();
-                        int startMin = startMinuteComboBox.getValue();
+                        int startHour = startHourComboBox.getValue()==null?0:startHourComboBox.getValue();
+                        int startMin = startMinuteComboBox.getValue()==null?0:startMinuteComboBox.getValue();
                         LocalDate endDate = endDatePicker.getValue();
-                        int endHour = endHourComboBox.getValue();
-                        int endMin = endMinuteComboBox.getValue();
+                        int endHour = endHourComboBox.getValue()==null?0:endHourComboBox.getValue();
+                        int endMin = endMinuteComboBox.getValue()==null?0:endMinuteComboBox.getValue();
 
                         attractions.setBeginTime(new TimeData(String.valueOf(startDate.getYear()), String.valueOf(startDate.getMonthValue()), String.valueOf(startDate.getDayOfMonth()), String.valueOf(startHour), String.valueOf(startMin)));
                         attractions.setEndTime(new TimeData(String.valueOf(endDate.getYear()), String.valueOf(endDate.getMonthValue()), String.valueOf(endDate.getDayOfMonth()), String.valueOf(endHour), String.valueOf(endMin)));
 
                     }
-
                     //dialog.showAndWait();
+                    attractionsList = cartTravelItinerary.getAttractionslist();
+                    ObservableList<Attractions> data = FXCollections.observableArrayList(attractionsList);
+                    travelItineraryTable.setItems(data);
                 }
             };
         });
@@ -285,6 +287,10 @@ public class CartController implements Initializable {
                 private void handleDeleteItemClick(ActionEvent event) {
                     Attractions attractions = getTableView().getItems().get(getIndex());
                     cartTravelItinerary.removeAttractions(attractions);
+
+                    attractionsList = cartTravelItinerary.getAttractionslist();
+                    ObservableList<Attractions> data = FXCollections.observableArrayList(attractionsList);
+                    travelItineraryTable.setItems(data);
                 }
 
             };
@@ -379,7 +385,6 @@ public class CartController implements Initializable {
 
     public void clickCartShowButton(ActionEvent event) {
         attractionsList = cartTravelItinerary.getAttractionslist();
-
         ObservableList<Attractions> data = FXCollections.observableArrayList(attractionsList);
         travelItineraryTable.setItems(data);
     }
